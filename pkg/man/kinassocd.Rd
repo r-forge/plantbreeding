@@ -43,9 +43,10 @@ Atkinson B, Therneau T (2009) kinship: mixed-effects Cox models, sparse matrices
 }
 \examples{
 data(kinassocd)
-out <- assoc.kin (dataframe = kinassocd,  yvar = "trait1", xvars = 8:length(kinassocd),
- id = "id", dadid = "dadid", momid = "momid", sex = "sex", model = "DOM")
-
+# out <- assoc.kin (dataframe = kinassocd,  yvar = "trait1", xvars = 8:length(kinassocd),
+ # id = "id", dadid = "dadid", momid = "momid", sex = "sex", model = "DOM")
+ # need package kinship to install manually to run the function 
+ 
 # map 
 CHR <- c(rep(1, 250), rep(2, 250), rep(3, 250), rep(4, 250))
 BP <- rep (1:250,4)
