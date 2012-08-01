@@ -35,10 +35,11 @@ simulated dataset
 \examples{
 data(alphasim)
 summary(alphasim)
-require(agricolae)
-attach (alphasim)
-model <- PBIB.test(block, genotype, replication, height, k=3)
-model$comparison
-model$means
+# not run 
+# require(agricolae)
+# attach (alphasim)
+# model <- PBIB.test(block, genotype, replication, height, k=3)
+# model$comparison
+# model$means
 }
 \keyword{datasets}
