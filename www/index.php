@@ -78,24 +78,20 @@ see <a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/g
   </ul>
 <hr><b>Installation and Download:</b>
 <blockquote>
-  <blockquote>
-    <blockquote> 
+
 To install the latest development version of package <tt>plantbreeding</tt> from R-Forge (if you are running a recent R version), use<br>
 <br>
 <div style="text-align: center;"> <tt>install.packages("plantbreeding",repos="http://r-forge.r-project.org")</tt></div>
 <br>
 <blockquote>
-  <blockquote>
-    <blockquote> 
+
 <hr><b> R package dependencies </b>
 <blockquote>
-  <blockquote>
-    <blockquote>
+
 The plantbreeding depends upon lme4, nlme, kinship, lattice and ggplot2 R packages. These packages are found for free installation from Comprehensive R Archive Network (CRAN) for free. The packages need to be installed for plantbreeding to work for specific functions
 <br>
 <blockquote>
-  <blockquote>
-    <blockquote>
+
 
 <hr><b>Developer / Maintainer:</b>
 <blockquote>
@@ -106,6 +102,9 @@ The plantbreeding depends upon lme4, nlme, kinship, lattice and ggplot2 R packag
 
 
 <p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
+
+<img style="width: 500px; height: 500px;" alt="Map plot produced by plant breeding" src="http://r-forge.r-project.org/scm/viewvc.php/*checkout*/www/plotwithmap.png?root=plantbreeding"><br>
+<br>
 
 </body>
 </html>
