@@ -9,12 +9,12 @@ names (filld) <- c("chr", "fillcol")
 library(plyr)
 mapd$chr <- factor(mapd$chr)
 gData <- ddply(mapd, .(chr), function(x){
-  data.frame(delta = diff(x$position), label = paste(head(x$label, -1), sep = ""))
+  data.frame(deltas = diff(x$position), label = paste(head(x$label, -1), sep = ""))
 })
 
 require(ggplot2)
 gData$FillCol <- rnorm(nrow(gData))
-p <- ggplot(gData, aes(x = chr, y = delta, fill = fillcol, label = label, width=.1)) + geom_bar(stat = "identity") +
+p <- ggplot(gData, aes(x = chr, y = deltas, fill = fillcol, label = label, width=.1)) + geom_bar(stat = "identity") +
 coord_flip() + scale_fill_gradient(low = fcol1, high = fcol2) + geom_text(position = "stack", angle = 90, hjust=5) + ylab("Position") + xlab("Group") + theme_bw()
 
 p + opts(legend.position="left",

@@ -7,7 +7,7 @@ manhatton.circos <- function (dataframe, SNPname, chromosome, position, pvcol,co
     names(dat) <- c("SNP", "chr", "pos", "pval")
     dat = subset(na.omit(dat[order(dat$chr, dat$pos), ]), (dat$pval >
         0 & dat$pval <= 1))
-
+     logp <- NULL; rm(logp)
     dat$logp = -log10(dat$pval + 2.225074e-308)
     mychr <- dat$chr
     nchr <- max(mychr)

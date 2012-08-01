@@ -7,6 +7,7 @@ function (dataframe, yvar,  genotypes = genotypes, replication,  Lines = Lines, 
        dataframe$Lines <- as.factor(dataframe$Lines)
         dataframe$Tester <- as.factor(dataframe$Tester)
        dataframe$replication <- as.factor(dataframe$replication)
+       Tester <- NULL; rm(Tester)
         #data$Yld <- data$Yld
         #print(summary(dataframe))
         countN <- function ( v ) { # function to count number of values 

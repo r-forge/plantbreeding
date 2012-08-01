@@ -3,6 +3,10 @@ function (dataframe, classvar = "class",yvar = "yvar",  arrow_yvar, arrow_label,
 library(ggplot2)
 library(grid) # unit() is in the grid package.
 library(plyr)  # Data restructuring
+namea <- NULL; rm(namea)
+mxvar <- NULL; rm(mxvar)
+Freqs <- NULL; rm(Freqs)
+
 arrow_pos = data.frame (class = arrow_class, namea = arrow_label,yvar = arrow_yvar, stringsAsFactors=FALSE)
 myd <- data.frame (class = dataframe[,classvar], yvar = dataframe[,yvar])
 myd <- myd[!is.na(myd$yvar),]

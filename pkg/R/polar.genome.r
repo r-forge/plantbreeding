@@ -5,7 +5,9 @@ names(mapdataframe) <- c("group", "position")
 
 mapsubset <- data.frame (mapsubset[, groupvar], mapsubset[,position])
 names(mapsubset) <- c("group", "position")
-  
+cbp <- NULL; rm(cbp)
+cbp_new <- NULL; rm(cbp_new)
+ 
 #mapdataframe$cpos <- cumsum (mapdataframe$pos)   
 mapsubset$pos1 <- mapsubset$position
 df3 <- merge (mapdataframe, mapsubset, by = c("group", "position"), all = TRUE)

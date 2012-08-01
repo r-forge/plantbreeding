@@ -2,6 +2,12 @@ plotgen <-
 function (dataframe, classvar, phenovar, selint = 0.1){
 require(ggplot2)
 require(plyr)
+x <- NULL; rm(x)
+y <- NULL; rm (y)
+q80 <- NULL; rm(q80)
+mn <- NULL; rm(mn)
+V1 <- NULL; rm(V1)
+
 mydf <- data.frame (classvar = dataframe[,classvar],x = dataframe[,phenovar]) 
 labeld <- ddply(mydf, .(classvar), NROW)
  show(labels)

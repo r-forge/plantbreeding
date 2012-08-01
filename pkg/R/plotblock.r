@@ -37,10 +37,14 @@ cblocks$l.pos <-  l.pos
 cblocks$lsize <-  lsize
 cblocks$psize <-  psize
 if (fill == "treatment") {
+x <- NULL; rm(x)
+y <- NULL; rm(y) 
 p <- ggplot(cblocks) +  geom_rect(aes(xmin=x-g.col, xmax=x + g.col, ymin=y - g.row, ymax=y + g.row, fill = label)) + scale_fill_hue("Treatment", h=h)
 p2 <- p + geom_text(aes(label=label, x=x, y=y, size = lsize)) + geom_text(aes(label=plotn, x=x, y=y+l.pos, colour = "red", size = psize))+ scale_y_continuous(breaks=seq(0, ncol, 1)) + xlab("") + ylab("blocks") + theme_bw()
 p2 +  opts(legend.position = "none")
 } else {
+x <- NULL; rm(x)
+y <- NULL; rm(y)
 p <- ggplot(cblocks) +  geom_rect(aes(xmin=x-g.col, xmax=x + g.col, ymin=y - g.row, ymax=y + g.row), fill= fill)
 p2 <- p + geom_text(aes(label=label, x=x, y=y), size = lsize) + geom_text(aes(label=plotn, x=x, y=y+l.pos, colour = "red"), size = psize)+ scale_y_continuous(breaks=seq(0, ncol, 1)) + xlab("") + ylab("blocks") + theme_bw()
 p2 +  opts(legend.position = "none")
