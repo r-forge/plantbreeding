@@ -5,8 +5,8 @@ names(mapdataframe) <- c("group", "position")
 
 mapsubset <- data.frame (mapsubset[, groupvar], mapsubset[,position])
 names(mapsubset) <- c("group", "position")
-cbp <- NULL; rm(cbp)
-cbp_new <- NULL; rm(cbp_new)
+cbp <- NULL
+cbp_new <- NULL
  
 #mapdataframe$cpos <- cumsum (mapdataframe$pos)   
 mapsubset$pos1 <- mapsubset$position

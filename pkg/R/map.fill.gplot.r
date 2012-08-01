@@ -2,7 +2,7 @@ map.fill.gplot <- function(mapd = mapd, chr = "chr", label = "label", position =
 require(ggplot2)
 mapd <- data.frame (mapd[,chr], mapd[,label], mapd[,position])
 names (mapd) <- c("chr", "label", "position")
-
+deltas  <- NULL
 filld <- data.frame (filld[, chr], filld[, fillcol])
 names (filld) <- c("chr", "fillcol")
 
