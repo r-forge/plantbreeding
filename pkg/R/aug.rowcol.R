@@ -49,7 +49,7 @@ mydf1.adj = transform(newaugdata1, yield.adj = yield - rowdf[row_match, 'yield']
 cat("Phenotypes and adjusted values : ", "\n\n")
 print(mydf1.adj)
 
- windows()
+ plot.new()
 #plot unadjusted and adjusted values
 plot(mydf1.adj$yield,mydf1.adj$yield.adj, xlab = "yield", ylab = " yield adjusted")
 abline (a= 0, b = 1, col = "red", lty = 2)

@@ -3,7 +3,7 @@ mapdata <- data.frame (position = mapdata[,position], marker = mapdata[,marker])
 ydata <-  data.frame (position = ydata[,position], yvar = ydata[,yvar])
 # plotting
 # Split the plot area in two
-layout(matrix(c(1,1,2),nc=1))
+layout(matrix(c(1,1,2),ncol=1))
 # Reduce the margins for the second plot
 mt <- par()$mar
 mt[1] <- 0
