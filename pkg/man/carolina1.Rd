@@ -5,7 +5,8 @@
 Analysis of North Carolina Design I
 }
 \description{
-The function perfromsperforms both conventional and restricted (or residual, or reduced) maximum likelihood (REML) analysis of North Carolina I design (Comstock and Rosbinson 1952).
+The function perfromsperforms both conventional and restricted (or residual, or 
+reduced) maximum likelihood (REML) analysis of North Carolina I design (Comstock and Rosbinson 1952).
 }
 \usage{
 carolina1(dataframe, set, male, female, progeny, replication, yvar, REML = TRUE)
@@ -13,7 +14,8 @@ carolina1(dataframe, set, male, female, progeny, replication, yvar, REML = TRUE)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
-Dataframe sould consist of variables set, male, female, progeny and replication along with at least one y variable (yvar) 
+Dataframe sould consist of variables set, male, female, progeny and replication 
+along with at least one y variable (yvar) 
 }
   \item{set}{
 name of numeric variable for set 
@@ -62,7 +64,7 @@ Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics An
 
 Mather K., Jinks J.L. (1971). Biometrical Genetics. Chapman & Hall, London.
 
-Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS® Institute, Inc.
+Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS Institute, Inc.
 }
 \author{
 Umesh R. Rosyara

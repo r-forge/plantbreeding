@@ -20,7 +20,7 @@ Winter wheat data  from mixed model data SAS
 %%  ~~ If necessary, more details than the __description__ above ~~
 }
 \source{
-Littell R.C.(2006) SAS for Mixed Models,SAS® Institute, Inc.
+Littell R.C.(2006) SAS for Mixed Models,SAS Institute, Inc.
 }
 \references{
 %%  ~~ possibly secondary sources and usages ~~

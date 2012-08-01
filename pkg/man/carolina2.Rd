@@ -56,7 +56,7 @@ Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics An
 Mather K., Jinks J.L. (1971). Biometrical Genetics. Chapman & Hall, London.
 
 
-Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS® Institute, Inc.
+Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS Institute, Inc.
 
 }
 \author{

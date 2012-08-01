@@ -5,7 +5,7 @@
 A partially balanced incomplete block experiment
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+A partially balanced incomplete block experiment
 }
 \usage{data(datapbib)}
 \format{
@@ -23,7 +23,8 @@ A partially balanced incomplete block experiment
 %%  ~~ reference to a publication or URL from which the data were obtained ~~
 }
 \references{
-Littel, R. C., Milliken, G. A., Stroup, W. W., and Wolfinger, R. D. (1996), SAS System for Mixed Models, SAS Institute (Data Set 1.5.1).
+Littel, R. C., Milliken, G. A., Stroup, W. W., and Wolfinger, R. D. (1996),
+ SAS System for Mixed Models, SAS Institute (Data Set 1.5.1).
 }
 \examples{
 data(datapbib)

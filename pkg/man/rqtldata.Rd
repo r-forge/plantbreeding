@@ -18,9 +18,9 @@ The simulated dataset consists of two traits and 2 chromosomes for qtl mapping u
 Simulated data 
 }
 \references{
-Broman K.W., Sen S. (2009) A guide to QTL mapping with R/qtl. Springer. http://www.rqtl.org/book
+Broman K.W., Sen S. (2009) A guide to QTL mapping with R/qtl. Springer
 
-Broman K.W., Wu H., Sen S., Churchill G.A. (2003) R/qtl: QTL mapping in experimental crosses. Bioinformatics 19, 889–890.
+Broman K.W., Wu H., Sen S., Churchill G.A. (2003) R/qtl-QTL mapping in experimental crosses. Bioinformatics 19, 889–890.
 
 Lander E.S., Botstein D. (1989) Mapping Mendelian factors underlying quantitative traits using RFLP linkage maps. Genetics 121, 185–199.
 

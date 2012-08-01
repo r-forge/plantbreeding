@@ -5,7 +5,7 @@
 Data from a balanced incomplete block design
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+Data from a balanced incomplete block design
 }
 \usage{data(balincom)}
 \format{

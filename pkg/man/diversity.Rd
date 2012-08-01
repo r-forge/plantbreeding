@@ -11,7 +11,7 @@ This function pricipal component analysis, cluster analysis and development of h
 diversity(dataframe, varcol = 2:length(dataframe), xvar = "genotype", 
 yvarlab = "marker",dendocol = "blue4", cor = TRUE, heatcol = cm.colors(256), 
 rc = rainbow(nrow(tvar),start = 0, end = 0.3),  cc = rainbow(ncol(tvar), 
-start = 0, end = 0.3), method = "ward", scale = "column", ...)
+start = 0, end = 0.3), method = "ward", scale = "column",...)
   
 }
 %- maybe also 'usage' for other objects documented here.
@@ -47,9 +47,6 @@ vector with column colour for heatmap
   \item{method}{
 the agglomeration method to be used for creating dendogram. This should be (an unambiguous abbreviation of) 
 one of "ward", "single", "complete", "average", "mcquitty", "median" or "centroid".
-}
-  \item{keep.dendro}{
-for heatmap plot: logical indicating if the dendrogram(s) should be kept as part of the result (when Rowv and/or Colv are not NA).
 }
   \item{scale}{
 for heatmap plot: character indicating if the values should be centered and scaled in either the row direction or the column direction, or none. 

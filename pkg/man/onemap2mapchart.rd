@@ -5,7 +5,7 @@
 Convert onemap map output to Marchart readable *mct" format 
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Convert onemap map output to Marchart readable *mct" format 
 }
 \usage{
 onemap2mapchart(mapfile, outprefix = ".")
@@ -32,8 +32,9 @@ Prefix of output mapchart file
 \references{
 Margarido GRA, Souza AP, Garcia AAF (2007) OneMap: software for genetic mapping in outcrossing species. Hereditas 144: 78-79
 
-Voorrips, R.E., 2002. MapChart: Software for the graphical presentation of linkage maps and QTLs. The Journal of Heredity 93 (1): 77-78.
-http://www.biometris.wur.nl/uk/Software/MapChart/
+Voorrips, R.E., 2002. MapChart: Software for the graphical presentation of linkage maps and QTLs. 
+The Journal of Heredity 93 (1): 77-78.
+
 
 }
 \author{

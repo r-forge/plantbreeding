@@ -5,7 +5,7 @@
 Example data to visualize response to selection and heritability  
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+Example data to visualize response to selection and heritability  
 }
 \usage{data(respdataf)}
 \format{

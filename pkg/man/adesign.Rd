@@ -38,11 +38,6 @@ Evaluation. eds. Kempton and Fox. Chapman and Hall. London.
 \author{
 Umesh R. Rosyara
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
  \code{\link{augblock}}

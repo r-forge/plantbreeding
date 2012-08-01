@@ -1,4 +1,4 @@
-rqtl2mapchart <- function (crossobj, trait = "1", chr = c(1, 2, 3)) {
+rqtl2mapchart <- function (crossobj,outobj, trait = "1", chr = c(1, 2, 3)) {
 
 write.cross(crossobj, format = "gary", filestem="data", chr = chr, digits=5)
 
@@ -7,7 +7,7 @@ markpos <- read.table("markerpos.txt",header=F)
 mymap <- data.frame(chid, markpos)
 names(mymap) <- c("group", "marker", "markpos")
 
-lodout.t <- data.frame(Map = out.em$pos, Group = out.em$chr, LOD = out.em$lod)
+lodout.t <- data.frame(Map = outobj$pos, Group = outobj$chr, LOD = outobj$lod)
 
 spt1 <- split(lodout.t, lodout.t$ Group)
 
@@ -30,7 +30,7 @@ cat("qtls")
 cat("\n")
 cat (paste (paste("qtl-", DF$group[1], sep = "" ), "auto",  "1", "2", "C4" ))
 cat("\n")
-cat (paste ("graphs", "S=3" , "H=", max(out.em$lod)+0.5))
+cat (paste ("graphs", "S=3" , "H=", max(outobj$lod)+0.5))
 cat("\n")
 cat ("const 2.85 L2 ")
 cat("\n")

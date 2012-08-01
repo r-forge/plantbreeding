@@ -26,7 +26,7 @@ The multi-location data from SAS for mixed model package
 Littel, R. C., Milliken, G. A., Stroup, W. W., and Wolfinger, R. D. (1996), SAS System for Mixed Models, SAS Institute (Data Set 2.8.1).
 }
 \references{
-Gauch H.G.(1992). Statistical analysis of regional yield trials:AMMI analysis of factorial designs. Elsevier, Amsterdam.
+Gauch H.G.(1992). Statistical analysis of regional yield trials - AMMI analysis of factorial designs. Elsevier, Amsterdam.
 
 Gauch H.G. (2006). Statistical analysis of yield trials by AMMI and GGE. Crop Sci. 46:1488–1500.
 
@@ -37,7 +37,8 @@ Eberhart S.A.,  Russell W.A. (1966) Stability parameters for comparing varieties
 
 Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics Analysis, Kalyani Publishers
 
-Kang M.S.,  Aggarwal V.D., Chirwa R.M.(2006) Adaptability and stability of bean cultivars as determined via yield-stability statistic and GGE biplot analysis. J. Crop Improv. 15:97–120
+Kang M.S.,  Aggarwal V.D., Chirwa R.M.(2006) Adaptability and stability of bean 
+cultivars as determined via yield-stability statistic and GGE biplot analysis. J. Crop Improv. 15:97–120
 
 }
 \examples{

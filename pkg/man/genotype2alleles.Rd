@@ -5,7 +5,7 @@
 Converting SNP or other two letter genotype format to alelele format
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Converting SNP or other two letter genotype format to alelele format
 }
 \usage{
 genotype2alleles(input.file, input.sep = ",", column.num = "all", allele.sep = "/",

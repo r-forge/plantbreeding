@@ -8,12 +8,15 @@ Convert R/qtl object to mapchart
 The function converts R/qtl (Broman and Sen 2009) object to mapchart file (Voorrips, 2002). Mapchart is one of popular free (license can be requested) software. 
 }
 \usage{
-rqtl2mapchart(crossobj, trait = "1", chr = c(1, 2, 3))
+rqtl2mapchart(crossobj,outobj=, trait = "1", chr = c(1, 2, 3))
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{crossobj}{
 R/qtl cross object 
+}
+  \item{outobj}{
+R/qtl output object 
 }
   \item{trait}{
 Trait name to be used to produce mapchart chart  
@@ -54,8 +57,7 @@ require(qtl)
 data(hyper)
 hyper <- calc.genoprob(hyper, step=2.5)
 out.em <- scanone(hyper, method="em")
-rqtl2mapchart (hyper, trait = "obs", chr = c(1, 2, 5, 9))
-
+rqtl2mapchart(crossobj = hyper,outobj=out.em, trait = "obs", chr = c(1, 2, 5, 9))
 #Example 2
    data(rqtldata)
    mydata <- calc.genoprob(rqtldata, step=1, error.prob=0.001)
@@ -63,7 +65,7 @@ rqtl2mapchart (hyper, trait = "obs", chr = c(1, 2, 5, 9))
    out.em <- scanone(rqtldata, method="em")
      summary (out.em, threshold=3)
     plot(out.em, chr=c(1,2))
-    rqtl2mapchart (rqtldata, trait = "obs", chr = c(1))
+    rqtl2mapchart (rqtldata,out.em, trait = "obs", chr = c(1))
     getwd() # the output file will be in the working directory 
     
 
