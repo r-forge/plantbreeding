@@ -9,7 +9,7 @@ The function performs line x tester analysis as outlined by Singh and Chaudhary 
 }
 \usage{
 line.tester(dataframe, yvar, genotypes = genotypes, replication, Lines = Lines,
- Testers = Tester, gclass = gclass)
+ Testers, gclass = gclass)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

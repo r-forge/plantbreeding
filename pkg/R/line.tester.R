@@ -1,5 +1,5 @@
 line.tester <-
-function (dataframe, yvar,  genotypes = genotypes, replication,  Lines = Lines, Testers = Tester, gclass = gclass )
+function (dataframe, yvar,  genotypes = genotypes, replication,  Lines = Lines, Testers, gclass = gclass )
 {      dataframe <- data.frame (dataframe[,yvar], dataframe[,genotypes], dataframe [, replication], dataframe [,Lines], dataframe[,Testers], dataframe [,gclass])
        names(dataframe) <- c("yvar", "genotypes", "replication", "Lines", "Tester", "gclass")
        dataframe$genotypes <- as.factor(dataframe$genotypes)
@@ -12,13 +12,6 @@ function (dataframe, yvar,  genotypes = genotypes, replication,  Lines = Lines, 
         countN <- function ( v ) { # function to count number of values 
                                     sum ( !is.na ( v ) ) - sum ( is.na ( v ) )
                                         }
-         #nas <- countN(y)
-         #if (nas > = 1){
-         #cat(" Aborted, missing value detected ")
-         #cat("Missing values :", nas, "\n\n")
-         #}
-         
-         ### if (nas == 0){ ????????????????????????????????????????????????????????????????????????????//
          md1 <- lm(yvar ~ genotypes + replication, data = dataframe) # anova treatment
          anvout <- anova(md1)
         

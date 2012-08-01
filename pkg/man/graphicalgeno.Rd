@@ -13,7 +13,7 @@ Color can be the genotype itself if is numerically inputted such as A =1, C =2, 
 \usage{
 graphicalgeno(dataframe = dataframe, group = "group", position = "position",
  yvar = "yvar", ycat = "ycat", namevar = "namevar", subset = TRUE, 
- subsetdata = datas,  panel.margin = 0.1, strip.background = "lightpink", 
+ subsetdata,  panel.margin = 0.1, strip.background = "lightpink", 
  filllow = "white", fillhigh = "darkgreen", textlab = TRUE, 
  textcolor = "blue", chr.arrange = "LR")
 }

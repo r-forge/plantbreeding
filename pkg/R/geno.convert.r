@@ -18,7 +18,7 @@ numbase <-  function(x) {
           x =   xlate[as.character(x)]
           }
 ownvec <- function(x) {
-          xlate <- ove
+          xlate <- ownvec
           x =   xlate[as.character (x)]
           }
 

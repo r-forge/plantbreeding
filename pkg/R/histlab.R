@@ -3,7 +3,7 @@ function (dataframe, classvar = "class",yvar = "yvar",  arrow_yvar, arrow_label,
 library(ggplot2)
 library(grid) # unit() is in the grid package.
 library(plyr)  # Data restructuring
-arrow_pos = data.frame (class = arrow_class, name = arrow_label,yvar = arrow_yvar, stringsAsFactors=FALSE)
+arrow_pos = data.frame (class = arrow_class, namea = arrow_label,yvar = arrow_yvar, stringsAsFactors=FALSE)
 myd <- data.frame (class = dataframe[,classvar], yvar = dataframe[,yvar])
 myd <- myd[!is.na(myd$yvar),]
 cat ("The rows with y variable missing are removed")
@@ -24,7 +24,7 @@ TableOfCounts <- ddply(myd, .(class), function(df) func(df))
 # Transfer counts of arrow_pos
 arrow_pos$upper <- (floor(arrow_pos$yvar/bwidth) * bwidth) + bwidth
 arrow_pos <- merge(arrow_pos, TableOfCounts, by = c("class", "upper"))
-arrow_pos$xvar <- (arrow_pos$upper - .5 * bwidth)      # x position of the arrow is at the midpoint of the bin
+arrow_pos$mxvar <- (arrow_pos$upper - .5 * bwidth)      # x position of the arrow is at the midpoint of the bin
 
 arrow_pos$class=factor(as.character(arrow_pos$class),
     levels= unique (myd$class)) # Gets rid of warnings.
@@ -34,8 +34,8 @@ ggplot(myd, aes(x=yvar)) +
      geom_histogram(colour=colour, fill=fill, binwidth=bwidth) +
      facet_wrap(~ class) + xlab (yvar) + 
      opts(panel.margin=unit(0, "lines")) +
-     geom_text(data=arrow_pos, aes(label=name, x=xvar, y=Freq + 2), size=4) +
+     geom_text(data=arrow_pos, aes(label=namea, x=mxvar, y=Freqs + 2), size=4) +
      geom_segment(data=arrow_pos,
-                  aes(x=xvar, xend=xvar, y=Freq + 1.5, yend=Freq + 0.25),
+                  aes(x=mxvar, xend=mxvar, y=Freqs + 1.5, yend=Freqs + 0.25),
                   arrow=arrow(length=unit(2, "mm")))
  }
