@@ -1,5 +1,5 @@
 histlab <-
-function (dataframe, classvar = "class",arrow_yvar = "arrow_yvar",  arrow_yvar, arrow_label, arrow_class, bwidth, colour = "cyan4", fill = "cyan4"){
+function (dataframe, classvar = "class",arrow_yvar = "arrow_yvar", arrow_label, arrow_class, bwidth, colour = "cyan4", fill = "cyan4"){
 library(ggplot2)
 library(grid) # unit() is in the grid package.
 library(plyr)  # Data restructuring
