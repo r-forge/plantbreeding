@@ -28,9 +28,6 @@ name of column with with treatments / genotypes (factor)
 name of column with yield or any y variable 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 \item{ANOVA}{Analysis of Variance Table}
 \item{Adjustment }{Original and Adjusted Phenotypic value}
@@ -39,21 +36,10 @@ name of column with yield or any y variable
 \item{se_diff }{Difference between two genotypes / varieties / entries in different rows or blocks}
 \item{se_geno_check}{Difference between two genotypes / varieties / entries and a check mean}
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara
 }
-\note{
-%%  ~~further notes~~
-}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 # example 1
 data(rowcoldata)
@@ -70,7 +56,4 @@ hist(stab$yield, col = "cadetblue", xlab = "Grain Yield",
 main = "Mean yields from Augmented Yield Trial")
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{}
-\keyword{}% __ONLY ONE__ keyword per line
+

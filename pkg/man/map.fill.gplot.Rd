@@ -1,6 +1,6 @@
 \name{map.fill.gplot}
 \alias{map.fill.gplot}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Chromosome bar plot or LD block plot using ggplot2 
 }
@@ -11,7 +11,7 @@ The function fills color between adjacent markers where color is scaled by conti
 map.fill.gplot(mapd = mapd, chr = "chr", label = "label", position = "position", 
 filld = filld, fillcol = "fillcol", fcol1 = "blue", fcol2 = "red")
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{mapd}{
 Map dataframe 
@@ -38,30 +38,8 @@ The first color to be used to brew color gradient within ggplot2
 The second color to be used to brew color gradient within ggplot2 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # Example 1 
@@ -82,7 +60,3 @@ chr <- rep(1:3, each = length(fillcol)/3)
    filld = filld, fillcol = "fillcol", fcol1 = "green", fcol2 = "red")  
  
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

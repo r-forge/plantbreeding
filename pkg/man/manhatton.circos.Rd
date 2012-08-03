@@ -1,6 +1,5 @@
 \name{manhatton.circos}
 \alias{manhatton.circos}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Polar and Cartesian Manhattan plots 
 }
@@ -11,7 +10,6 @@ This function plots polar or Cartesian Manhattan plots. Different variations can
 manhatton.circos(dataframe, SNPname, chromosome, position, pvcol, colour = "seablue", 
 ymax = "maximum", ymin = "minimum", gapbp = 1000, type = "polar", geom = "point")
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 Name of dataframe 
@@ -47,30 +45,8 @@ Value "polar" is polar plot need to be produced, "regular" if regular catisian p
 type of geom to be plotted - example "point" (conventional) and "line" for line 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 
@@ -111,7 +87,4 @@ manhatton.circos(dataframe = data12, SNPname = "snp", chromosome = "chr", positi
 
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

@@ -52,30 +52,8 @@ hue value for color, 0 to 360, applicable when fill = "Treatment"
 size of label size text  
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # example 1
@@ -123,5 +101,4 @@ plotblock(label = nsam, plotn = plot.number,  nrow = 4 , ncol = length (ntrt),
  g.col = 0.49, g.row = 0.49, fill = "azure2", l.pos = -0.2)
 
 }
-\keyword{}
-\keyword{}% __ONLY ONE__ keyword per line
+

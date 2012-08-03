@@ -1,6 +1,5 @@
 \name{carolina2}
 \alias{carolina2}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Analysis of North Carolina design II  
 }
@@ -10,7 +9,6 @@ The function performs analysis of North Carolina II design (Comstock and Rosbins
 \usage{
 carolina2(dataframe, set, male, female, replication, yvar)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 Dataframe with the variablesevariables set, male, female, replication and other response variables 
@@ -30,9 +28,6 @@ Name of column with replication column
   \item{yvar}{
 Name of response variable to be used for the analysis 
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
 The following values as list are returned 
@@ -62,15 +57,6 @@ Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS Institute, In
 \author{
 Umesh Rosyara 
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
  data(northcaro2)
  # for trait yield 
@@ -94,9 +80,4 @@ tum$var.mf
 tum$var.Af
 tum$var.D
 
-
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

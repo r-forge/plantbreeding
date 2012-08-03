@@ -19,14 +19,8 @@ The line x tester analysis dataset is taken from Single and Chaudhari and Singh 
     \item{\code{trait1}}{trait 1 - Y variable}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics Analysis, Kalyani Publishers
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
 data(linetester)

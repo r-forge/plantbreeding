@@ -1,6 +1,5 @@
 \name{gs2joinmap}
 \alias{gs2joinmap}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Convert Conversion of Ggenostudio matrix output to cross pollinated or self-pollinated Joinmap codes. 
 }
@@ -21,16 +20,6 @@ Dataframe should consist of first two rows for parent 1 and parent 2 followed by
 Type of population to be coded "CP" for cross pollinated fullsib family or "F2" for F2 or RIL of early or advanced generations 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 http://www.kyazma.nl/index.php/mc.JoinMap/sc.Evaluate
 
@@ -39,15 +28,6 @@ http://www.illumina.com/support/array/array_software/genomestudio.ilmn
 }
 \author{
 Umesh Rosyara
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # Cross pollinated (CP) population example 
@@ -82,7 +62,4 @@ write.table(outjoinF2, file = "outjoinF2.csv", sep = ",", col.names = NA,
 qmethod = "double")
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

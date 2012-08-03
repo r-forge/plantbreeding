@@ -41,26 +41,8 @@ Color for lines of the histogram
 Colour need to be filled in the histogram. 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-The function produce histograms. 
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh R Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
  # example 1
@@ -102,7 +84,3 @@ histlab(dataframe = pop2, classvar = "population", yvar = "yvar2", arrow_yvar = 
  arrow_label = parents, arrow_class = population,  bwidth = 0.1, colour = "salmon", 
  fill = "lightsalmon")
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{}
-\keyword{}% __ONLY ONE__ keyword per line

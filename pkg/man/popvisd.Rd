@@ -16,9 +16,6 @@ Example multiple population dataset for frequency distribution visualization.
     \item{\code{trait2}}{trait 2 - a numeric vector}
   }                      
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Simulated dataset 
 }

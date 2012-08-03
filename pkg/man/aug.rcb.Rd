@@ -25,9 +25,6 @@ Name of column consisting of block (use "nameofblock" format)
 Name of response variable column (use "yvar" format)
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 A list consisting of the following items :
 \item{anova}{Analysis of variance object}
@@ -38,21 +35,8 @@ A list consisting of the following items :
 \item{se_geno}{Difference between two varieties /entries and a check mean}
 }
 
-
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh R. Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 
@@ -70,7 +54,3 @@ main = "Mean yields from Augmented Yield Trial")
 
 }
 
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

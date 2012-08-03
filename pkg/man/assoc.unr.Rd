@@ -1,6 +1,5 @@
 \name{assoc.unr}
 \alias{assoc.unr}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Association mapping in unrelated or unstructured mapping population using linear model 
 }
@@ -12,7 +11,7 @@ Also covariate can be fitted to model. The different genetic model (Additive or 
 \usage{
 assoc.unr(dataframe, yvar, xvars, covariate = FALSE, cvar, binomial = FALSE, model = "ADD")
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{dataframe}{
 dataframe with at least one y variable (yvar), x variable(s) (SNP markers) while covariate (cvar)  
@@ -38,26 +37,11 @@ Logical whether the y variable is used is binomial
 Whether to fit additive model - "ADD", or dominance - "DOM" or regular anova - "NONE". 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 The function output  a dataframe with markers, pvalue (for SNPs) and cprob (for covariate), if covariate is fitted in the model.
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # simulated example
@@ -110,5 +94,4 @@ out7 <- assoc.unr(dataframe = snpdata,  yvar = "status", xvars = 5:length (snpda
  covariate = TRUE, cvar = "covtrait", binomial = TRUE)
 out7 
 }
-\keyword{}
-\keyword{}% __ONLY ONE__ keyword per line
+

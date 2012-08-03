@@ -1,6 +1,5 @@
 \name{auugmentdesign}
 \alias{auugmentdesign}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Randomization of augmented block design 
 }
@@ -10,7 +9,6 @@ Generating randomized augumented block design
 \usage{
 auugmentdesign(checks, newtrt, block.size = block.size, r, seed = 999)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{checks}{
 vector with name of checks (replicated) 
@@ -28,16 +26,6 @@ replications
 random seed 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Mead, R. 1997.  Design of plant breeding trials.  In Statistical Methods for Plant Variety
 Evaluation. eds. Kempton and Fox. Chapman and Hall. London. 
@@ -47,12 +35,6 @@ Umesh Rosyara
 }
 \note{
 block.size and r can not be zero or NA. Total of block size should be equal to number of checks x r + number of new treatments.  
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 ## example 1 
@@ -79,7 +61,4 @@ block.size = block.size1, r = r1,  seed = 124))
 
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

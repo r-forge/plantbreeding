@@ -24,9 +24,6 @@ The data is list of threee matrix and a phenotypic dataframe.
 \details{
 List of X, G, A, phenodf 
 }
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
 \references{
 Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics Analysis, Kalyani Publishers
 

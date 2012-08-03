@@ -1,6 +1,5 @@
 \name{mapbar.plot}
 \alias{mapbar.plot}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Chromosome bar plot or LD block plot 
 }
@@ -11,7 +10,6 @@ The plot is useful to plot map where each interval is filled with different colo
 mapbar.plot(mapdat = mapdat, chr = "chr", position = "position", label = "label", 
 colorpalvec = heat.colors, size = 10, filld = filld, chr1 = "chr1", fillcol = "fillcol")
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{mapdat}{
 Map dataframe 
@@ -44,27 +42,8 @@ Name of variable in dataframe for filling colors (for example linkage disequibri
 \details{
 The bar size can be changed by changing dimension of plot are (reduced heigh smaller bar, increased heigh larger bar) 
 }
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
  #Example:
@@ -92,11 +71,4 @@ filld <- data.frame(chr1 = rep(1:3, each = length(fillcol)/3), fillcol)
  # using build in color brewer                          
 mapbar.plot (mapdat = mapdat, chr = "chr" ,position = "position",label = "label",
  colorpalvec = cm.colors, size = 20, filld = filld, chr1 = "chr1")                      
- 
-                       
-
-}
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+ }

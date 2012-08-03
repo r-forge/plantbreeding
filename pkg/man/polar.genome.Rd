@@ -1,6 +1,6 @@
 \name{polar.genome}
 \alias{polar.genome}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Circular (polar) genome plot  
 }
@@ -11,7 +11,7 @@ Circular (polar) genome plot with markers represented in points outer circle and
 polar.genome(mapdataframe, mapsubset, groupvar = "group", position = "position", 
 gapbp = 10, pt.pch = 19, sub.pch = 17, pt.size = 4, sub.size = 6)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{mapdataframe}{
 Map dataframe, with group (chromosome), position (physical or genetic position) 
@@ -41,30 +41,8 @@ Size of pch for marker circle
 Size of pch for qtl / gene circle 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 gr1 <- c(1, 5, 15, 20, 30, 40)
@@ -83,7 +61,4 @@ polar.genome(mapdataframe = mapdataframe, mapsubset = mapsubset, groupvar = "gro
 
                                                                         
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

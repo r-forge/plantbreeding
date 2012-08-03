@@ -19,9 +19,6 @@ Data for analysis of north Carolina design I (Comstock and Rosbinson 1952).
     \item{\code{yield}}{yield - Y variable}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics Analysis, Kalyani Publishers
 }

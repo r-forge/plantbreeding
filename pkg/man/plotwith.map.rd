@@ -1,6 +1,6 @@
 \name{plotwith.map}
 \alias{plotwith.map}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Chromosomal maps with or without scaled ticks 
 }
@@ -14,7 +14,6 @@ minor allele frequency). The scatter plot can have points or lines or area as us
 plotwith.map(mapdata, ydata, yvar, position, marker, type = "l", ycol = "blue4", 
 mbar.col = "gray20", ylab = "", cex.lab = 1, chr.lab = 1, ...) 
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{mapdata}{
 dataframe with map information 
@@ -55,28 +54,6 @@ The magnification to be used for x and y labels relative to the current setting 
 More graphical parameters can be passed to the scatter plot, help(par)
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-The plot return a plot where map is combined with scatter of line plot. 
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
-\author{
-Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 # Example 1 
 #minor allele frequency
@@ -111,9 +88,5 @@ plotwith.map(mapdata = mapdata, ydata = mapminor,yvar = "minorallele",
 position = "position", marker = "snpname", type = "o", pch = 19, ycol = "darkgreen", 
 mbar.col = "gray20", ylab = "Minor Alele Frequency", cex.lab = 3, chr.lab = 3)
 
-
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

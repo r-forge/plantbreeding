@@ -18,12 +18,6 @@ Data from a balanced incomplete block design
     \item{\code{Grp}}{a factor with levels \code{13} \code{24}}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
 \references{
 Littel, R. C., Milliken, G. A., Stroup, W. W., and Wolfinger, R. D. (1996), SAS System for Mixed Models, SAS Institute (Data Set 5.4)
 }
@@ -38,7 +32,6 @@ print(anova(mod1Bal))
 # with Grp in the model 
 print(mod2Bal <- lmer(y ~ Treatment + x : Grp + (1 | Block), balincom))
 print(anova(mod2Bal))
-  
-  
+    
 }
-\keyword{datasets}
+

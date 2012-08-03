@@ -1,6 +1,6 @@
 \name{hsq.single}
 \alias{hsq.single}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Broad sense Mixed model analysis of Heritability estimation   
 }
@@ -10,7 +10,7 @@ Mixed model analysis of Heritability from single replicated RCB experiment using
 \usage{
 hsq.single(dataframe, yvars, genovar, replication, exout = F, REML = F)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{dataframe}{
 dataframe object 
@@ -30,9 +30,6 @@ logical variable (TRUE or FALSE), depending upon whether extended output is to b
   \item{REML}{
 logical variable (TRUE or FALSE), depending upon whether REML be used to fit the model
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
 Depending upon REML (REML = TRUE or REML = FALSE) and extensive output (exout = TRUE or exout = FALSE), different output are returned. 
@@ -61,15 +58,6 @@ Littell R.C.(2006) SAS for Mixed Models,SAS Institute, Inc.
 \author{
 Umesh Rosyara 
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 data (rcbsingle)
 p1 <- hsq.single (dataframe = rcbsingle, yvars = "tgw", genovar = "genovar",
@@ -87,7 +75,6 @@ replication = "replication", exout= TRUE, REML = TRUE)
 print(p2)
 
 
-# do not work ??
 hsq.single (dataframe = rcbsingle, yvars = "grw", genovar = "genovar", 
 replication = "replication", exout= FALSE, REML = TRUE)
 
@@ -99,7 +86,4 @@ replication = "replication", exout= TRUE, REML = TRUE)
 
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

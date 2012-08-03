@@ -29,9 +29,6 @@ Name of replication variable
 Name of Y variable to be used in the analysis 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 %%  ~Describe the value returned
 %%  If it is a LIST, use
@@ -96,7 +93,3 @@ myd <- melt(results$means)
 heatmap (results$means, col = rev(cm.colors (10)))
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

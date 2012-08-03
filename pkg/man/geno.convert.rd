@@ -11,7 +11,6 @@ The function converts recoding from DNA base pair (A/C/G/T) to number or other p
 geno.convert(dataframe, tranvec, ownvec = "ACGT", output.file, outsep = ",", 
 na.strings = "NA")
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 Input dataframe, the text or other documents can read to create dataframe using read.table function  
@@ -37,30 +36,8 @@ The output file seperator. Use "," for comma delinimated file, " " space delimin
 what spring should be used for missing data. 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # Example 1, convert number base (A, C, G, T, D, I) to number (1, 2, 3, 4, 5, 6) 
@@ -102,7 +79,4 @@ print(p3)
  # outsep = ",",na.strings = "-")
 # print(p4)
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

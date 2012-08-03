@@ -114,14 +114,8 @@ Ten genotypes were characterized by 100 markers. This data will be used to demon
     \item{\code{MR100}}{a numeric vector}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Simulated data 
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
 data(variability)

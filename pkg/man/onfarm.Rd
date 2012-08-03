@@ -18,14 +18,8 @@ Simulated data from on-farm experiments to demonstrate application of mixed mode
     \item{\code{trait1}}{trait 1 - Y variable }
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Simulated data set 
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
 data(onfarm)

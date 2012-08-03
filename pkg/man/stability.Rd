@@ -1,6 +1,6 @@
 \name{stability}
 \alias{stability}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Stability analysis based on Eberhart and Russell (1966) model  
 }
@@ -10,7 +10,7 @@ The function implements the Eberhart and Russell (1966) model for stability anal
 \usage{
 stability(dataframe, yvar, genotypes, environments, replication)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{dataframe}{
 dataframe with Y variables, genotype, environment, and replication  
@@ -28,16 +28,6 @@ Name of environments variable
 Name of replication variable 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Eberhart S.A.,  Russell W.A. (1966) Stability parameters for comparing varieties. Crop Sci. 6: 36-40.
 
@@ -45,15 +35,6 @@ Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics An
 }
 \author{
 Umesh R Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 yvar <- c( 36.4, 40.0, 32.4, 33.5, 41.3, 27.9, 38.5, 38.6, 41.6, 22.6,
@@ -82,9 +63,5 @@ out <- stability (dataframe = mydf1 , yvar = "yvar", genotypes = "genotypes",
 environments = "environments", replication =  "replication")
 # print out 
 out 
-
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

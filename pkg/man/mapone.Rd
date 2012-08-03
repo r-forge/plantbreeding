@@ -12,9 +12,6 @@ This is example data for creating genetic map using onemap (Margarido et al. 200
 "f2.onemap" object with 250 individuals with 75 markers.  There are two traits - "QT1" and "QT2". 
 
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 A simulated dataset 
 }
@@ -88,6 +85,5 @@ for(i in 1:lgrp$n.groups){
 
 ##write maps.list to "mapone_vs1.map" file
 write.map(mapslist, "mapone_vs1.map")
-
 }
-\keyword{datasets}
+

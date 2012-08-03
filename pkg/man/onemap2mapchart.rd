@@ -1,6 +1,5 @@
 \name{onemap2mapchart}
 \alias{onemap2mapchart}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Convert onemap map output to Marchart readable *mct" format 
 }
@@ -10,7 +9,7 @@ Convert onemap map output to Marchart readable *mct" format
 \usage{
 onemap2mapchart(mapfile, outprefix = ".")
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{mapfile}{
 Name of mapfile outputed by write.map function 
@@ -19,35 +18,15 @@ Name of mapfile outputed by write.map function
 Prefix of output mapchart file 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Margarido GRA, Souza AP, Garcia AAF (2007) OneMap: software for genetic mapping in outcrossing species. Hereditas 144: 78-79
 
 Voorrips, R.E., 2002. MapChart: Software for the graphical presentation of linkage maps and QTLs. 
 The Journal of Heredity 93 (1): 77-78.
 
-
 }
 \author{
 Umesh Rosyara
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 data(mapone)
@@ -69,7 +48,4 @@ write.map(mapslist, "mapone.map")
 
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

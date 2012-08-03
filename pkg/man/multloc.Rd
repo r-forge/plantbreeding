@@ -19,9 +19,6 @@ The multi-location data from SAS for mixed model package
     \item{\code{Fe}}{Fe: a numeric vector}
     \item{\code{Grp}}{Groups}}
   }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Littel, R. C., Milliken, G. A., Stroup, W. W., and Wolfinger, R. D. (1996), SAS System for Mixed Models, SAS Institute (Data Set 2.8.1).
 }
@@ -72,4 +69,4 @@ heatmap (results$means)
   print(d2) 
 
 }
-\keyword{datasets}
+

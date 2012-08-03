@@ -48,31 +48,10 @@ Width of line (see graphical par in R / graphics)
 End style of line (see graphical par in R / graphics)
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
 }
-\note{
-%%  ~~further notes~~
-}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 #Example data 
 dat <- data.frame(yvar = c(1:10),id = paste ("Frag-", 1:10, sep= ""), 
@@ -93,7 +72,4 @@ par(mfrow= c(2,1))
   abline ( h = 5, col = "pink4")
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{.}
-\keyword{ .}% __ONLY ONE__ keyword per line
+

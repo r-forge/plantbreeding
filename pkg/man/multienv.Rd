@@ -17,12 +17,6 @@ Simulated Multi- evironment data for stability and Additive Main Effects and Mul
     \item{\code{environments}}{environments: \code{CA} \code{CB} \code{CC} \code{MN} \code{SD}}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
-\source{
-
-}
 \references{
 Gauch H.G.(1992). Statistical analysis of regional yield trials:AMMI analysis of factorial designs. Elsevier, Amsterdam.
 
@@ -76,4 +70,4 @@ require(ggplot2)
   print(d2)
  
 }
-\keyword{datasets}
+

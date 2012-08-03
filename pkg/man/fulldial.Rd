@@ -21,9 +21,6 @@ Data for a full 8 x 8 diallel for grain yield from Singh and Chaudhary (1979)
     \item{\code{YIELD}}{Grain yield}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics Analysis, Kalyani Publishers
 }

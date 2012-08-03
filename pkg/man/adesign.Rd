@@ -63,5 +63,4 @@ block.size1 = c(16, 16, 16, 16)
 print(EX2 <- auugmentdesign (checks = checks1, newtrt = newtrt1, 
 block.size = block.size1, r = r1,  seed = 124)) 
 }
-\keyword{~kwd1}
-\keyword{~kwd2}
+

@@ -22,12 +22,6 @@ Example data for analysis of North Carolina design II (Comstock and Rosbinson 19
     \item{\code{weight}}{weight}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
 \references{
 Comstock R.F., Rosbinson F.F (1952). Estimation of average dominance of genes. In Heterosis, Iowa State
 College Press, Iowa City, Iowa, chapter 30.

@@ -11,9 +11,6 @@ The simulated dataset consists of two traits and 2 chromosomes for qtl mapping u
 \format{
  The data is R/qtl of class "f2" and "cross".  
 }
-\details{                                           
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Simulated data 
 }

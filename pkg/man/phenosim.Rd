@@ -1,6 +1,5 @@
 \name{phenosim}
 \alias{phenosim}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Simulation of phenotypic data 
 }
@@ -10,7 +9,6 @@ Simulation of phenotypic data with supplied alpha, delta, mean and variance.
 \usage{
 phenosim(n, p = 0.5, alpha = 10, delta = -10, sig = 4, mu = 50, plot = TRUE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{n}{
 Number of individuals simulated 
@@ -34,9 +32,6 @@ grant mean
 logical variable (TRUE or FALSE) depending upon whether to plot cross or not 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 returns vector of phenotypic values. If plot "TRUE" density plot will be displayed.  
 }
@@ -47,15 +42,6 @@ Falconer D. S., Mackay T.F.C. (1996). Introduction to Quantitative Genetics. Fou
 }
 \author{
 Umesh Rosyara
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 
@@ -69,7 +55,4 @@ plt1 <- phenosim (n = 1000 , p = 0.4, alpha = 0, delta = -10, sig = 3, mu = 60, 
 print(plt1)
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

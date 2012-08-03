@@ -17,15 +17,7 @@ The example dataset for Augmented randomized block design
     \item{\code{gw}}{a numeric vector - grain weight}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-}
+
 \examples{
 data(augblock)
 out <- aug.rcb(dataframe = augblock, genotypes = "var", block = "blk", yvar = "gw")

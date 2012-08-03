@@ -1,6 +1,5 @@
 \name{gencor.lm}
 \alias{gencor.lm}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Computing genetic correlation using linear model from single site replicated experiments 
 }
@@ -10,10 +9,8 @@ The genetic correlation between two traits is calculated by fitting linear model
 \usage{
 gencor.lm(dataframe, yvar1, yvar2, genovar, replication = replication, exout = F)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
-%%     ~~Describe \code{dataframe} here~~
 }
   \item{yvar1}{
 name of first Y variable 
@@ -28,11 +25,8 @@ name of genotype variable
 name of replication variable 
 }
   \item{exout}{
-%%     ~~Describe \code{exout} here~~
+logical if extended output should be provided 
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
 The result consists of a list of following components:
@@ -48,15 +42,6 @@ Falconer D. S., Mackay T.F.C. (1996). Introduction to Quantitative Genetics. Fou
 }
 \author{
 Umesh R Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # mydata 
@@ -77,10 +62,5 @@ print(ct)
 anova(ct$modelV1) # analysis variance of variable 1
 anova(ct$modelV2) # analysis of variance of variable 2
 anova(ct$modelV1V2) # analysis of variance of variable 1 and variable 2 
-
-
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~correlation }
-\keyword{ ~association}% __ONLY ONE__ keyword per line
+

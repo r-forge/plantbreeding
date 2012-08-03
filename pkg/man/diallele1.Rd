@@ -1,6 +1,5 @@
 \name{diallele1}
 \alias{diallele1}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Analysis of Diallel data
 }
@@ -11,7 +10,6 @@ Calculates general and specific combining ability and other estimates for Dialle
 diallele1(dataframe, yvar = "yvar", progeny = "progeny", male = "male",
  female = "female", replication = "replication")
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 Dataframe object 
@@ -32,16 +30,6 @@ Name of female variable to be used in the analysis
 Name of replication variable 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Griffing, B. 1956. Concept of general and specific combining ability in relation to diallel crossing systems. Austr. J. Biol. Sci. 9, 463-493.
 
@@ -52,15 +40,6 @@ Mather K., Jinks J.L. (1971). Biometrical Genetics. Chapman & Hall, London.
 }
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 
@@ -82,7 +61,3 @@ out$varcomp.model2  # variance components for model 2
 
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

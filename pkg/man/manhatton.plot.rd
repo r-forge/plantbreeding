@@ -1,6 +1,6 @@
 \name{manhatton.plot}
 \alias{manhatton.plot}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Manhattan plot of p-values 
 }
@@ -12,7 +12,7 @@ manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ymax = "maximum"
  ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue", 
  "lightpink4", "blue"), line1, line2)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{dataframe}{
 dataframe with SNP name (SNPname), chromosome, physical position (position), p-value columns. 
@@ -59,20 +59,10 @@ Most of plot prameters (not conflicting with specified here) can be applied to p
 }
 \value{
 Produce Manhattan plot 
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
+
 }
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 
@@ -129,7 +119,4 @@ manhatton.plot(dataframe = dat2, SNPname = "snp", chromosome = "chr", position =
 title(main = "Mahattan plot of results for trait2", sub = "Method: Linear mixed model")
  
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{~kwd1}
-\keyword{~kwd2}% __ONLY ONE__ keyword per line
+

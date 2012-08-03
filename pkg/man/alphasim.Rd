@@ -42,4 +42,4 @@ summary(alphasim)
 # model$comparison
 # model$means
 }
-\keyword{datasets}
+

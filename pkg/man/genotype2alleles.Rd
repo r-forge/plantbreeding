@@ -1,6 +1,6 @@
 \name{genotype2alleles}
 \alias{genotype2alleles}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Converting SNP or other two letter genotype format to alelele format
 }
@@ -11,7 +11,7 @@ Converting SNP or other two letter genotype format to alelele format
 genotype2alleles(input.file, input.sep = ",", column.num = "all", allele.sep = "/",
  comment.char = "#", na.strings = "NA", output.file, output.spe = ",")
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{input.file}{
 Name of input file - eg csv or txt tabdelimited files  
@@ -38,30 +38,8 @@ Desired name of output file
 Desired seperator for the output file (use "," for csv, "  " for space delimited files) 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # Example 1
@@ -89,10 +67,4 @@ p <- genotype2alleles(input.file = "mycsv26.csv", input.sep = ",", column.num = 
   allele.sep = "/",comment.char = "#",na.strings = "NA", output.file = "out_mycsv26.csv" ,
    output.spe = ",")
 print(p)
-
-
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

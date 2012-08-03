@@ -1,6 +1,5 @@
 \name{diversity}
 \alias{diversity}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Diversity analysis 
 }
@@ -14,7 +13,6 @@ rc = rainbow(nrow(tvar),start = 0, end = 0.3),  cc = rainbow(ncol(tvar),
 start = 0, end = 0.3), method = "ward", scale = "column",...)
   
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 Name of dataframe 
@@ -33,7 +31,7 @@ Name of y variable label
 Line colour for dendogram, default is "blue4"  
 }
   \item{cor}{
-%%     ~~Describe \code{cor} here~~
+logical Correlation 
 }
   \item{heatcol}{
 colour for main area of heapmap plot 
@@ -56,30 +54,17 @@ The default is "row" if symm false, and "none" otherwise.
 Other heatmap plot parameters can be passed as argument, see help(heatmap) 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
 \value{
 In addition to four plots: screeplot, biplot,dendogram and heatmap plot, the output object will be list of following components: 
 \item{pca.results}{output of Pricipal component results, for detail help(prcomp) }
 \item{Hclust}{output of cluster analysis, for details help(hclust)}
 \item{hv}{output of heatmap plot, for details help(heatmap)}
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
+
 \author{
 Umesh Rosyara 
 }
-\note{
-%%  ~~further notes~~
-}
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 
 # default setting
@@ -128,7 +113,4 @@ varcol = 2:21, xvar = "genotype", yvarlab = "marker", dendocol = "black", cor = 
 heatcol = cm.colors(256), method = "ward", keep.dendro = FALSE, scale = "none")
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+

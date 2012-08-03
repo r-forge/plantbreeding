@@ -1,6 +1,5 @@
 \name{graphicalgeno}
 \alias{graphicalgeno}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Graphical genotype plot with shaded regions 
 }
@@ -17,7 +16,6 @@ graphicalgeno(dataframe = dataframe, group = "group", position = "position",
  filllow = "white", fillhigh = "darkgreen", textlab = TRUE, 
  textcolor = "blue", chr.arrange = "LR")
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 The dataframe with group (= chromosome), position (map position), yvar (color coding variable, numeric), ycat (text variable for example genotype), and namevar (individual identification variable).
@@ -65,30 +63,8 @@ Color of the text
 How to arrange chromosomes, "LR" is single row with left to right, "TR" a single column from top to bottom, "DF" is ggplot is allowed to decide number of rows or columns depending upon the open plot area. 
 }
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
-\references{
-%% ~put references to the literature/web site here ~
-}
 \author{
 Umesh Rosyara 
-}
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
 # Example 1
@@ -167,12 +143,6 @@ graphicalgeno (dataframe = genoprob.data, group = "chromosomes",
 position = "markposition",   yvar = "genotypicprob", ycat = "genotypes",
 namevar = "idvar",subset = FALSE,subsetdata = datas, panel.margin = 0.1 , 
 strip.background = "lightpink", filllow = "yellow",
- fillhigh = "blue", textcolor = "blue", chr.arrange = "DF")
-           
-         
+ fillhigh = "blue", textcolor = "blue", chr.arrange = "DF")                  
  }
 
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

@@ -16,12 +16,6 @@ A partially balanced incomplete block experiment
     \item{\code{Block}}{a factor with levels \code{1} \code{10} \code{11} \code{12} \code{13} \code{14} \code{15} \code{2} \code{3} \code{4} \code{5} \code{6} \code{7} \code{8} \code{9}}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
 \references{
 Littel, R. C., Milliken, G. A., Stroup, W. W., and Wolfinger, R. D. (1996),
  SAS System for Mixed Models, SAS Institute (Data Set 1.5.1).

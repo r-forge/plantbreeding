@@ -1,6 +1,5 @@
 \name{carolina1}
 \alias{carolina1}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Analysis of North Carolina Design I
 }
@@ -11,7 +10,6 @@ reduced) maximum likelihood (REML) analysis of North Carolina I design (Comstock
 \usage{
 carolina1(dataframe, set, male, female, progeny, replication, yvar, REML = TRUE)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 Dataframe sould consist of variables set, male, female, progeny and replication 
@@ -38,9 +36,6 @@ name of name of y variable to be analyzed
   \item{REML}{
 TRUE or FALSE depending upon if you want to fit REML model or not 
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
 The following values as list are returned 
@@ -69,15 +64,6 @@ Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS Institute, In
 \author{
 Umesh R. Rosyara
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 data(northcaro1)
 # using general linear model
@@ -104,7 +90,3 @@ p2$model
 p2$`BULP estimates`
 
 }
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-\keyword{ ~kwd1 }
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line

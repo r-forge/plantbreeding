@@ -20,9 +20,6 @@ peanut multi-location data from genetic analysis using SAS
     \item{\code{gen}}{genotypes}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Littell R.C.(2006) SAS for Mixed Models,SAS Institute, Inc.
 }

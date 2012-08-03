@@ -16,14 +16,8 @@ inter wheat data  from mixed model data SAS
     \item{\code{Moisture}}{a numeric vector}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
 \source{
 Littell R.C.(2006) SAS for Mixed Models,SAS Institute, Inc.
-}
-\references{
-%%  ~~ possibly secondary sources and usages ~~
 }
 \examples{
 data(wintwheat)
