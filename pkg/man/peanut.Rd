@@ -29,7 +29,7 @@ Littell R.C.(2006) SAS for Mixed Models,SAS Institute, Inc.
 \references{
 Gauch H.G.(1992). Statistical analysis of regional yield trials:AMMI analysis of factorial designs. Elsevier, Amsterdam.
 
-Gauch H.G. (2006). Statistical analysis of yield trials by AMMI and GGE. Crop Sci. 46:1488–1500.
+Gauch H.G. (2006). Statistical analysis of yield trials by AMMI and GGE. Crop Sci. 46:1488-1500.
 
 Gauch, H.G.,  Zobel.R.W. (1996). AMMI analysis of yield trials. p.85-122. In M.S. Kang and H.G. Gauch, Jr. (ed.) Genotype-byenvironment
 interaction. CRC Press, Boca Raton, FL.

@@ -96,11 +96,11 @@ outsep = ",", na.strings = "-")
 print(p3)
 
 # Example 4: recoding the data with own vector
-ove <- c( "AA" = "A", "AB" = "H", "BA" = "H", "BB" = "B" )
+# ove <- c( "AA" = "A", "AB" = "H", "BA" = "H", "BB" = "B" )
 
-p4 <- geno.convert(dataframe = ex3,tranvec= "OWN", ownvec = ove, output.file = "p4.csv",
- outsep = ",",na.strings = "-")
-print(p4)
+# p4 <- geno.convert(dataframe = ex3,tranvec= "OWN", ownvec = ove, output.file = "p4.csv",
+ # outsep = ",",na.strings = "-")
+# print(p4)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

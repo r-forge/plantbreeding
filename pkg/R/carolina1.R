@@ -42,8 +42,8 @@ function (dataframe, set, male, female, progeny, replication, yvar, REML = TRUE 
         require("lme4") # lme4a has new functions 
         formula <- paste(yvar, "~ (1| set) +(1| set : replication)+ (1| male : set ) + (1| female : male :set) + (1| female : male : set : replication)")
         fm1Gen <- lmer(formula, data = dataframe)
-         fm1.ran <- VarCorr(fm1Gen) # extracting variance random effect
-         fm1.eff <- ranef (fm1Gen)
+         fm1.ran <- lme4::VarCorr(fm1Gen) # extracting variance random effect
+         fm1.eff <- lme4::ranef (fm1Gen)
          fmsrvar <-  c(as.numeric(diag(fm1.ran$`female:male:set:replication`)))
           fmsvar <- c(as.numeric(diag(fm1.ran$`female:male:set`)))
            #show(fmsvar <- c(as.numeric(diag(fm1.ran$`female::set`))))
