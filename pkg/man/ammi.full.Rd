@@ -1,6 +1,6 @@
 \name{ammi.full}
 \alias{ammi.full}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Additive Main Effects and Multiplicative Interaction (AMMI) analysis  
 }
@@ -12,7 +12,6 @@ The results of AMMI can be visualized as biplot (Gower and Hand 1996).
 \usage{
 ammi.full(dataframe, environment, genotype, replication, yvar)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{dataframe}{
 dataframe objet 
@@ -43,9 +42,9 @@ Name of Y variable to be used in the analysis
 \references{
 Gauch H.G.(1992). Statistical analysis of regional yield trials:AMMI analysis of factorial designs. Elsevier, Amsterdam.
 
-Gauch H.G. (2006). Statistical analysis of yield trials by AMMI and GGE. Crop Sci. 46:1488–1500.
+Gauch H.G. (2006). Statistical analysis of yield trials by AMMI and GGE. Crop Sci. 46:1488-1500.
 
-Gauch H.G.,  Zobel.R.W. (1996). AMMI analysis of yield trials. p.85–122. In M.S. Kang and H.G. Gauch, Jr. (ed.) Genotype-byenvironment
+Gauch H.G.,  Zobel.R.W. (1996). AMMI analysis of yield trials. p.85-122. In M.S. Kang and H.G. Gauch, Jr. (ed.) Genotype-byenvironment
 interaction. CRC Press, Boca Raton, FL.
 
 Gower J.C., Hand D.J. (1996). Biplots. Monographs on Statistics and Applied Probability. London, UK: Chapman & Hall

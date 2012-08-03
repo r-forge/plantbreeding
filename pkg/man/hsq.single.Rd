@@ -54,9 +54,9 @@ When exout is FALSE only heritability is returned.
 \references{
 Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics Analysis, Kalyani Publishers
 
-Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS® Institute, Inc.
+Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS Institute, Inc.
 
-Littell R.C.(2006) SAS for Mixed Models,SAS® Institute, Inc.
+Littell R.C.(2006) SAS for Mixed Models,SAS Institute, Inc.
 }
 \author{
 Umesh Rosyara 

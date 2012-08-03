@@ -5,7 +5,7 @@
 Winter wheat data  from mixed model data SAS 
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+inter wheat data  from mixed model data SAS 
 }
 \usage{data(wintwheat)}
 \format{

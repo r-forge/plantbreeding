@@ -32,8 +32,8 @@ name of column with position of markers in mapdata
 name of yvar column in ydata  
 }
   \item{type}{
-type of additional information plot (type used in graphical parameters from R/base). Use  
-"p" for points, "l" for lines,"b" for both,"h" for ‘histogram’ like (or ‘high-density’) vertical lines. 
+type of additional information plot (type used in graphical parameters from R base). Use  
+p for points, l for lines,b for both,h for histogram like (or high-density) vertical lines. 
 
 }
   \item{ycol}{

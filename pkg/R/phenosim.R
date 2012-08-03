@@ -7,7 +7,7 @@ if (plot == FALSE){
                  return(simulatedY)
          } else {#
 
-windows()
+plot.new()
 dev.new(width=10, height=10)
 plot(density(simulatedY), col = "blue4", main =  paste("simulated phenotype:\n heritability = ",round(h2,3)),
 xlab = paste ("mean: ", round(mean (simulatedY), 1), "   sd: ", round(sd(simulatedY), 1)))

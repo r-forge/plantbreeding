@@ -5,7 +5,7 @@
 Simulation of phenotypic data 
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Simulation of phenotypic data with supplied alpha, delta, mean and variance. 
 }
 \usage{
 phenosim(n, p = 0.5, alpha = 10, delta = -10, sig = 4, mu = 50, plot = TRUE)

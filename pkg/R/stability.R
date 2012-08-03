@@ -79,7 +79,7 @@ cat(" Eberhart and Russell Model of stability, Crop Science 1966, 6:37-40", "\n\
 outdat = data.frame(genotypes= devtab$genotypes, bij = devtab$bij, sdij = S2di)
 print(outdat)
 cat(" Stable genotype have bij = 1 and sdij = 0", "\n\n"  )
-windows()
+plot.new()
 dev.new(width=8, height=8)
 plotst = data.frame (mydf, envindex = rep (iij, each = length(levels(dataframe$genotypes))))   
 plot(plotst$yvar, plotst$envindex, xlab = "trait", ylab = "stability index", pch= 16, col = "blue")

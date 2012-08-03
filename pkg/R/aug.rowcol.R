@@ -54,7 +54,7 @@ print(mydf1.adj)
 plot(mydf1.adj$yield,mydf1.adj$yield.adj, xlab = "yield", ylab = " yield adjusted")
 abline (a= 0, b = 1, col = "red", lty = 2)
 
- windows()
+ plot.new()
 # plot observed vs adjusted 
 dev.new(width=8, height=8) 
 plot(mydf1.adj$yield,mydf1.adj$yield.adj, xlab = "yield", ylab = " yield adjusted", asp=1, pch = 16, col = "lightseagreen") 

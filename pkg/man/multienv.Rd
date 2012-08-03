@@ -26,7 +26,7 @@ Simulated Multi- evironment data for stability and Additive Main Effects and Mul
 \references{
 Gauch H.G.(1992). Statistical analysis of regional yield trials:AMMI analysis of factorial designs. Elsevier, Amsterdam.
 
-Gauch H.G. (2006). Statistical analysis of yield trials by AMMI and GGE. Crop Sci. 46:1488–1500.
+Gauch H.G. (2006). Statistical analysis of yield trials by AMMI and GGE. Crop Sci. 46:1488-1500.
 
 Gauch, H.G.,  Zobel.R.W. (1996). AMMI analysis of yield trials. p.85-122. In M.S. Kang and H.G. Gauch, Jr. (ed.) 
 Genotype x byenvironment interaction. CRC Press, Boca Raton, FL.
@@ -36,7 +36,7 @@ Eberhart S.A.,  Russell W.A. (1966) Stability parameters for comparing varieties
 Singh R.K., Chaudhary B.D.(1985) Biometrical Methods in Quantitative Genetics Analysis, Kalyani Publishers
 
 Kang M.S.,  Aggarwal V.D., Chirwa R.M.(2006) Adaptability and stability of bean cultivars as determined via yield-stability 
-statistic and GGE biplot analysis. J. Crop Improv. 15:97–120
+statistic and GGE biplot analysis. J. Crop Improv. 15:97-120
 
 }
 \examples{

@@ -20,15 +20,15 @@ Simulated data
 \references{
 Broman K.W., Sen S. (2009) A guide to QTL mapping with R/qtl. Springer
 
-Broman K.W., Wu H., Sen S., Churchill G.A. (2003) R/qtl-QTL mapping in experimental crosses. Bioinformatics 19, 889–890.
+Broman K.W., Wu H., Sen S., Churchill G.A. (2003) R/qtl-QTL mapping in experimental crosses. Bioinformatics 19, 889-890.
 
-Lander E.S., Botstein D. (1989) Mapping Mendelian factors underlying quantitative traits using RFLP linkage maps. Genetics 121, 185–199.
+Lander E.S., Botstein D. (1989) Mapping Mendelian factors underlying quantitative traits using RFLP linkage maps. Genetics 121, 185-199.
 
-Haley C.S., Knott S.A. (1992) A simple regression method for mapping quantitative trait loci in line crosses using flanking markers. Heredity 69, 315–324.
+Haley C.S., Knott S.A. (1992) A simple regression method for mapping quantitative trait loci in line crosses using flanking markers. Heredity 69, 315-324.
 
-Sen S., and Churchill G.A. (2001) A statistical framework for quantitative trait mapping. Genetics 159, 371–387. 
+Sen S., and Churchill G.A. (2001) A statistical framework for quantitative trait mapping. Genetics 159, 371-387. 
 
-Lincoln S.E., Lander E.S. (1992) Systematic detection of errors in genetic linkage data. Genomics 14, 604–610.
+Lincoln S.E., Lander E.S. (1992) Systematic detection of errors in genetic linkage data. Genomics 14, 604-610.
 
 Please cite Broman et al.( 2003) and Broman and Sen (2009), if you use qtl in mapping. 
 
