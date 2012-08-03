@@ -103,7 +103,7 @@ The plantbreeding depends upon lme4, nlme, kinship, lattice and ggplot2 R packag
 
 <p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
 
-<img style="width: 500px; height: 500px;" alt="Map plot produced by plant breeding" src="http://r-forge.r-project.org/scm/viewvc.php/*checkout*/www/plotwithmap.png?root=plantbreeding"><br>
+<img style="width: 500px; height: 500px;" alt="snap shots of plantbreeding graphs" src="http://r-forge.r-project.org/scm/viewvc.php/*checkout*/www/figuresnapshot.png?root=plantbreeding"><br>
 <br>
 
 </body>
