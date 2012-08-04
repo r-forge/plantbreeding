@@ -53,9 +53,9 @@ echo $contents; } ?>
 <ul>
   <ul>
     <ul>
-       <li> The R-package <tt>plantbreeding</tt> collection of functions for analysis of data and visualization of results from Plant Breeding and Genetics experiments. <br>
+</br> The R-package <tt>plantbreeding</tt> collection of functions for analysis of data and visualization of results from Plant Breeding and Genetics experiments. <br>
        <li> Functionalities </li> 
-      <ul>
+        <ul>
         <li> Data analysis </li>
           <ul>  
           <li> Planning and Analysis of Plant breeding specialized designs </li>
@@ -71,7 +71,7 @@ echo $contents; } ?>
           </ul>
 		  
  <hr><b> Licensing and WARRANTY </b>		  
-            <li>The package comes with ABSOLUTELY NO WARRANTY; for details
+  <li>The package comes with ABSOLUTELY NO WARRANTY; for details
 see <a href="http://www.gnu.org/copyleft/gpl.html">http://www.gnu.org/copyleft/gpl.html</a>
 (GPL). </li>
  </ul>
@@ -88,14 +88,14 @@ To install the latest development version of package <tt>plantbreeding</tt> from
 <hr><b> R package dependencies </b>
 <blockquote>
 
-The plantbreeding depends upon lme4, nlme, kinship, lattice and ggplot2 R packages. These packages are found for free installation from Comprehensive R Archive Network (CRAN) for free. The packages need to be installed for plantbreeding to work for specific functions
+The plantbreeding depends upon lme4,  lattice and ggplot2 R packages. These packages are found for free installation from Comprehensive R Archive Network (CRAN) for free. The packages need to be installed for plantbreeding to work for specific functions
 <br>
 <blockquote>
 
 
 <hr><b>Developer / Maintainer:</b>
 <blockquote>
-<p> The package is developed and maintained by Umesh Rosyara, Michigan State University, East Lansing.The bugs and suggestions can be mailed to the developer <rosyara@msu.edu>.</p>
+<p> The package is developed and maintained by Umesh Rosyara, Michigan State University, East Lansing.The bugs and suggestions can be mailed to the developer rosyara_at_dot_edu.</p>
 </br>  
   </blockquote>
 
@@ -103,7 +103,7 @@ The plantbreeding depends upon lme4, nlme, kinship, lattice and ggplot2 R packag
 
 <p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
 
-<img style="width: 500px; height: 500px;" alt="snap shots of plantbreeding graphs" src="http://r-forge.r-project.org/scm/viewvc.php/*checkout*/www/figuresnapshot.png?root=plantbreeding"><br>
+<img style="width: 800px; height: 800px;" alt="snap shots of plantbreeding graphs" src="http://r-forge.r-project.org/scm/viewvc.php/*checkout*/www/figuresnapshot.png?root=plantbreeding"><br>
 <br>
 
 </body>
