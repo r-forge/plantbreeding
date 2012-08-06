@@ -8,7 +8,7 @@ function (checks, newtrt, block.size = block.size, r,  seed = 999)
          set.seed(seed)
        ttrtn = length(newtrt) + length(checks)*r 
        if (min(block.size) < length(checks)) {
-                 warning (" Block size can not be zero, NA, or less than number of checks: ", length(checks),"\n\n")
+                 warning (" Block size can not be zero, NA, or less than number of checks : ", length(checks),"\n\n")
                  } else if (sum (block.size) !=  ttrtn){
                  warning (" Sum of block.size =  ", sum(block.size), "  should be equal to number of required plots =  ",ttrtn, "\n")
                                   } else  {
