@@ -53,8 +53,8 @@ classvars = c("xv2", "xv3", "xv1", "xv4"), classy = TRUE, ycut = c(-Inf,10,14,16
 
 # Example 2
 snpprop <- data.frame (SN = 1:4000, chromsome = as.factor (rep(1:10, each = 400)), 
-genome = sample (c("A", "B", "C"), 4000, replace = "TRUE"),
-snpsource = sample (c("Nap", "Kat"), 4000, replace = "TRUE"),
+genome = sample (c("A", "B", "C"), 4000, replace = TRUE),
+snpsource = sample (c("Nap", "Kat"), 4000, replace = TRUE),
  minorAF = rnorm (4000, 0.5, 0.1), GenTrain = rnorm(4000, 0.8, 0.05)) 
  
  summary (snpprop)

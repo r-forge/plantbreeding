@@ -41,9 +41,9 @@ Umesh Rosyara
 }
 \examples{
 # Example 1, convert number base (A, C, G, T, D, I) to number (1, 2, 3, 4, 5, 6) 
-X1 <- c(sample (c("AA", "AC", "CA", "CC", "--"), 200, replace = "TRUE"))
-X2 <- c(sample (c("II", "ID", "DI", "DD", "--"), 200, replace = "TRUE"))
-X3 <- c(sample (c("TT", "GG", "TG", "GT", "--"), 200, replace = "TRUE"))
+X1 <- c(sample (c("AA", "AC", "CA", "CC", "--"), 200, replace = TRUE))
+X2 <- c(sample (c("II", "ID", "DI", "DD", "--"), 200, replace = TRUE))
+X3 <- c(sample (c("TT", "GG", "TG", "GT", "--"), 200, replace = TRUE))
 mydf1 <- data.frame(X1, X2, X3)
 
 p1 <- geno.convert(dataframe = mydf1, tranvec="ACGT", output.file = "p2.csv",
@@ -54,18 +54,18 @@ print(p1)
 
 # Example 2, convert number (1, 2, 3, 4, 5, 6) to base (A, C, G, T, D, I) 
 
-var1 <- c(sample (c(11, 13, 31, 33, "--"), 100, replace = "TRUE"))
-var2 <- c(sample (c(11, 12, 21, 22, "--"), 100, replace = "TRUE"))
-var3 <- c(sample (c(55, 56, 65, 66, "--"), 100, replace = "TRUE"))
+var1 <- c(sample (c(11, 13, 31, 33, "--"), 100, replace = TRUE))
+var2 <- c(sample (c(11, 12, 21, 22, "--"), 100, replace = TRUE))
+var3 <- c(sample (c(55, 56, 65, 66, "--"), 100, replace = TRUE))
 ex2 <- data.frame(var1, var2, var3)
 p2 <- geno.convert(dataframe = ex2, tranvec="num2base", output.file = "p.csv",
  outsep = ",", na.strings = "-")
 print(p2)
 
 # Example 3, convert A, B to number 1, 2 
-V1 <- c(sample (c("AA", "AB", "BA", "BB", "--"), 100, replace = "TRUE"))
-V2 <- c(sample (c("AA", "AB", "BA", "BB", "--"), 100, replace = "TRUE"))
-V3 <- c(sample (c("AA", "AB", "BA", "BB", "--"), 100, replace = "TRUE"))
+V1 <- c(sample (c("AA", "AB", "BA", "BB", "--"), 100, replace = TRUE))
+V2 <- c(sample (c("AA", "AB", "BA", "BB", "--"), 100, replace = TRUE))
+V3 <- c(sample (c("AA", "AB", "BA", "BB", "--"), 100, replace = TRUE))
 ex3 <- data.frame(V1, V2, V3)
 
 p3 <- geno.convert(dataframe = ex3, tranvec="AB", output.file = "p3.csv", 
