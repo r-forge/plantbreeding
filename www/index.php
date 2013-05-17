@@ -95,7 +95,7 @@ The plantbreeding depends upon lme4,  lattice and ggplot2 R packages. These pack
 <hr><b> PDF manual </b>
 <blockquote>
 
-pdf version of plantbreeding manual can be downloaded from here https://r-forge.r-project.org/plantbreeding-manual.pdf 
+pdf version of plantbreeding manual can be available on request. 
 <br>
 <blockquote>
 
