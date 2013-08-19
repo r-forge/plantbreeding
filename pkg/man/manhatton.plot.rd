@@ -8,7 +8,7 @@ Manhattan plot of p-values
 The function develops Mahnattan plot of p-values scaled to -log10(p).  If polar type of Manhattan plot is desired use the function manhatton.circos. Manhattan plot (Gibson 2010) are popular in plotting association mapping results, however can be used to plot other results genome-wide. 
 }
 \usage{
-manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ymax = "maximum",
+manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum",
  ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue", 
  "lightpink4", "blue"), line1, line2)
 }
@@ -30,6 +30,11 @@ Name of variable column consisting of physical position of SNPs - (eg. "physical
 Name of p-value column to be used for plotting, dataframe can consists of multiple p-value column, can be plotted one by one. 
 Note that p-value should not contain zero or Inf or NaNs  
 }
+  \item{ylabel}{
+Y axis label, only if pconv is not "-log10", defualt is "pvalue"
+}
+
+
   \item{ymax}{
 Maximum value to be plotted in Y axis, if ymax is less than 8, the plot will set the maximum to 8 otherwise user defined maximum.   
 }
@@ -117,6 +122,13 @@ title(main = "Mahattan plot of results for trait1", sub = "Method: Linear mixed 
 manhatton.plot(dataframe = dat2, SNPname = "snp", chromosome = "chr", position = "pos",
  pvcol = "pval2", line1 = 4, line2 = 8, ymax = "maximum", ymin = 0)
 title(main = "Mahattan plot of results for trait2", sub = "Method: Linear mixed model")
- 
+
+# Example 3, plotting simple p-value or R-square 
+ data13 <- data.frame (snp = 1: 2000*20 , chr = c(rep(1:20, each = 2000)), 
+pos= rep(1:2000, 20), pval= rnorm(2000*20, 0.15, 0.05))
+manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", SNPname = "snp", chromosome = "chr", 
+position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
+color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20) )
+
 }
 

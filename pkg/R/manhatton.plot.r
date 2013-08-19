@@ -1,4 +1,4 @@
-manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, ymax = "maximum", 
+manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum", 
     ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue", 
         "lightpink4", "blue"), line1, line2)                                                         
 {
@@ -9,8 +9,11 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yma
     
     dat = subset(na.omit(dat[order(dat$chr, dat$pos), ]), (dat$pval > 
         0 & dat$pval <= 1))
-         
+    if(pconv == "-log10"){ 
     dat$logp = -log10(dat$pval + 2.225074e-308)
+    } else {
+    dat$logp = dat$pval
+    }
     mychr <- dat$chr
     nchr <- max(dat$chr)
       if (nchr > 1) {
@@ -37,15 +40,29 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yma
     }
     if (ymax == "maximum") 
         ymax <- ceiling(max(dat$logp))
+    if(pconv == "-log10"){
     if (ymax < 8) 
         ymax <- 8
+        } else {
+        ymax <- 1
+        }
+    if(pconv == "-log10"){
     if (ymin == "minimum") 
         ymin <- floor(min(dat$logp))
     if (ymin > 8) 
         ymin <- 8
+        } else {
+        ymin <- 0
+        }
+    if(pconv == "-log10"){
     plot(dat$bp, dat$logp, pch = pch[out], col = color[out], 
         ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))), 
         xlab = "Chromosome", xaxt = "n")
+        } else {
+     plot(dat$bp, dat$logp, pch = pch[out], col = color[out], 
+        ylim = c(ymin, ymax), ylab = ylabel, 
+        xlab = "Chromosome", xaxt = "n")
+        }    
     infun <- function(X) ((max(X) + min(X))/2)
     tickd <- aggregate(bp ~ chr, data = dat, FUN = infun)
     axis(1, at = tickd$bp, labels = tickd$chr)
@@ -60,19 +77,36 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yma
         if (length(pch) > length(unique(dat$chr))) 
         stop("Maximum number of pch allowed should not exceed to number of chromosomes:  ", 
             length(unique(dat$chr)))
-        dat$logp = -log10(dat$pval + 2.225074e-308)    
+           if(pconv == "-log10"){ 
+                  dat$logp = -log10(dat$pval + 2.225074e-308)
+                   } else {
+                     dat$logp = dat$pval
+                      }    
         chr <- dat$chr
         pos <- dat$pos
         if (ymax == "maximum") 
         ymax <- ceiling(max(dat$logp))
-        if (ymax < 8) 
-        ymax <- 8
-        if (ymin == "minimum") 
-            ymin <- floor(min(dat$logp))
-        if (ymin > 8) 
-             ymin <- 8
+        
+           if(pconv == "-log10"){
+                      if (ymax < 8) 
+                       ymax <- 8
+                         } else {
+                          ymax <- 1
+                          }
+     if(pconv == "-log10"){
+      if (ymin == "minimum") 
+        ymin <- floor(min(dat$logp))
+      if (ymin > 8) 
+        ymin <- 8
+        } else {
+        ymin <- 0
+        }
+         if(pconv == "-log10"){
         plot(dat$pos, dat$logp, pch = pch, col = color, ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))), 
+        xlab = paste ("Chromosome", unique(dat$chr), sep = ""))} else {
+             plot(dat$pos, dat$logp, pch = pch, col = color, ylim = c(ymin, ymax), ylab = ylabel, 
         xlab = paste ("Chromosome", unique(dat$chr), sep = ""))
+        }
         if (line1) 
         abline(h = line1, col = "blue")
        if (line2) 
@@ -80,3 +114,5 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yma
     
   }
   }
+ 
+
