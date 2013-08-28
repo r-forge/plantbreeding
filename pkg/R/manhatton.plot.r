@@ -1,6 +1,6 @@
 manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum", 
     ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue", 
-        "lightpink4", "blue"), line1, line2)                                                         
+        "lightpink4", "blue"), line1, line2, ...)                                                         
 {
     
     dat <- data.frame(dataframe[, SNPname], dataframe[, chromosome], 
@@ -57,11 +57,11 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
     if(pconv == "-log10"){
     plot(dat$bp, dat$logp, pch = pch[out], col = color[out], 
         ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))), 
-        xlab = "Chromosome", xaxt = "n")
+        xlab = "Chromosome", xaxt = "n", ...)
         } else {
      plot(dat$bp, dat$logp, pch = pch[out], col = color[out], 
         ylim = c(ymin, ymax), ylab = ylabel, 
-        xlab = "Chromosome", xaxt = "n")
+        xlab = "Chromosome", xaxt = "n", ...)
         }    
     infun <- function(X) ((max(X) + min(X))/2)
     tickd <- aggregate(bp ~ chr, data = dat, FUN = infun)
@@ -103,9 +103,9 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
         }
          if(pconv == "-log10"){
         plot(dat$pos, dat$logp, pch = pch, col = color, ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))), 
-        xlab = paste ("Chromosome", unique(dat$chr), sep = ""))} else {
+        xlab = paste ("Chromosome", unique(dat$chr), sep = ""), ...)} else {
              plot(dat$pos, dat$logp, pch = pch, col = color, ylim = c(ymin, ymax), ylab = ylabel, 
-        xlab = paste ("Chromosome", unique(dat$chr), sep = ""))
+        xlab = paste ("Chromosome", unique(dat$chr), sep = ""), ...)
         }
         if (line1) 
         abline(h = line1, col = "blue")

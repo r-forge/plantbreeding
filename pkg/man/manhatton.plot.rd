@@ -10,7 +10,7 @@ The function develops Mahnattan plot of p-values scaled to -log10(p).  If polar 
 \usage{
 manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum",
  ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue", 
- "lightpink4", "blue"), line1, line2)
+ "lightpink4", "blue"), line1, line2, ...)
 }
 
 \arguments{
@@ -57,6 +57,9 @@ Value at the point where you need to Horizental threshold line 1. NULL for no li
 }
   \item{line2}{
 Value at the point where you need to Horizental threshold line 2. NULL for no line 
+}
+  \item{...}{
+more graphical parameters can be applied - see help (par)  
 }
 }
 \details{
