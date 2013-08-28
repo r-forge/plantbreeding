@@ -41,18 +41,21 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
     if (ymax == "maximum") 
         ymax <- ceiling(max(dat$logp))
     if(pconv == "-log10"){
-    if (ymax < 8) 
+    if (ymax < 8){ 
         ymax <- 8
         } else {
         ymax <- 1
         }
-    if(pconv == "-log10"){
+        }
     if (ymin == "minimum") 
         ymin <- floor(min(dat$logp))
-    if (ymin > 8) 
+        
+   if(pconv == "-log10"){
+        if (ymin > 8){ 
         ymin <- 8
         } else {
         ymin <- 0
+        }
         }
     if(pconv == "-log10"){
     plot(dat$bp, dat$logp, pch = pch[out], col = color[out], 
