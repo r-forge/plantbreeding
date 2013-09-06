@@ -6,9 +6,12 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
     dat <- data.frame(dataframe[, SNPname], dataframe[, chromosome], 
         dataframe[, position], dataframe[, pvcol])
     names(dat) <- c("SNP", "chr", "pos", "pval")
-    
+   
+   if(pconv == "-log10"){ 
     dat = subset(na.omit(dat[order(dat$chr, dat$pos), ]), (dat$pval > 
         0 & dat$pval <= 1))
+        }
+        
     if(pconv == "-log10"){ 
     dat$logp = -log10(dat$pval + 2.225074e-308)
     } else {
@@ -38,25 +41,21 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
         
         out[mychr %in%  s] <- i
     }
-    if (ymax == "maximum") 
-        ymax <- ceiling(max(dat$logp))
-    if(pconv == "-log10"){
-    if (ymax < 8){ 
-        ymax <- 8
+    ymax1 <- ceiling(max(dat$logp))
+      if (ymax == "maximum"){ 
+        ymax <- ymax1
         } else {
-        ymax <- 1
+        ymax <- ymax
         }
-        }
-    if (ymin == "minimum") 
-        ymin <- floor(min(dat$logp))
+   ymin1 <- floor(min(dat$logp))
         
-   if(pconv == "-log10"){
-        if (ymin > 8){ 
-        ymin <- 8
+  if (ymin == "minimum"){ 
+        ymin <- ymin1
         } else {
-        ymin <- 0
+        ymin <- ymin
         }
-        }
+       
+        
     if(pconv == "-log10"){
     plot(dat$bp, dat$logp, pch = pch[out], col = color[out], 
         ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))), 
@@ -87,27 +86,35 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
                       }    
         chr <- dat$chr
         pos <- dat$pos
-        if (ymax == "maximum") 
-        ymax <- ceiling(max(dat$logp))
+     
+      if (ymax == "maximum") 
+        ymax1 <- ceiling(max(dat$logp))
+    if(pconv == "-log10"){
+    if (ymax == "maximum"){ 
+        ymax <- ymax1
+        } else {
+        ymax <- 8
+        }
+        } else {
+        ymax <- ymax1
+        }
+    if (ymin == "minimum") 
+        ymin1 <- floor(min(dat$logp))
         
-           if(pconv == "-log10"){
-                      if (ymax < 8) 
-                       ymax <- 8
-                         } else {
-                          ymax <- 1
-                          }
-     if(pconv == "-log10"){
-      if (ymin == "minimum") 
-        ymin <- floor(min(dat$logp))
-      if (ymin > 8) 
-        ymin <- 8
+   if(pconv == "-log10"){
+        if (ymin == "minimum"){ 
+        ymin <- ymin1
         } else {
         ymin <- 0
         }
+        } else {
+        ymin <- 0
+        }  
+        
          if(pconv == "-log10"){
         plot(dat$pos, dat$logp, pch = pch, col = color, ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))), 
         xlab = paste ("Chromosome", unique(dat$chr), sep = ""), ...)} else {
-             plot(dat$pos, dat$logp, pch = pch, col = color, ylim = c(ymin, ymax), ylab = ylabel, 
+        plot(dat$pos, dat$logp, pch = pch, col = color, ylim = c(ymin, ymax), ylab = ylabel, 
         xlab = paste ("Chromosome", unique(dat$chr), sep = ""), ...)
         }
         if (line1) 

@@ -36,10 +36,14 @@ Y axis label, only if pconv is not "-log10", defualt is "pvalue"
 
 
   \item{ymax}{
-Maximum value to be plotted in Y axis, if ymax is less than 8, the plot will set the maximum to 8 otherwise user defined maximum.   
+Maximum value to be plotted in Y axis, if ymax is "maximum", this will automatically
+calculate maximum value from the data or user can define own maximum. The value 
+are rounded using ceiling while setting such maximum.   
 }
   \item{ymin}{
-Minimum value to be plotted in X axis. 
+Minimum value to be plotted in X axis. If this is "minimum", this will automatically
+calculate minimum value from data. The values are rounded to full number (using 
+floor).  
 }
   \item{gapbp}{
 Gap between two adjecent chromsomome for plotting. Should be specified to scale of distances provided for X axis (ie. base pair). The default value is 500.  
