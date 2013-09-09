@@ -2,7 +2,8 @@
 \alias{manhatton.plot}
 
 \title{
-Manhattan plot of p-values 
+Manhattan plot of p-values (log transoformed or raw) or other values such as R-square
+ (variance explained) 
 }
 \description{
 The function develops Mahnattan plot of p-values scaled to -log10(p).  If polar type of Manhattan plot is desired use the function manhatton.circos. Manhattan plot (Gibson 2010) are popular in plotting association mapping results, however can be used to plot other results genome-wide. 
