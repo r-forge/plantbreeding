@@ -67,7 +67,7 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
         }    
     infun <- function(X) ((max(X) + min(X))/2)
     tickd <- aggregate(bp ~ chr, data = dat, FUN = infun)
-    axis(1, at = tickd$bp, labels = tickd$chr)
+    axis(1, at = tickd$bp, labels = tickd$chr, ...)
     if (line1) 
         abline(h = line1, col = "blue")
     if (line2) 
