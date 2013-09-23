@@ -10,8 +10,8 @@ The function develops Mahnattan plot of p-values scaled to -log10(p).  If polar 
 }
 \usage{
 manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum",
- ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue", 
- "lightpink4", "blue"), line1, line2, ...)
+    ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue",
+        "lightpink4", "blue"), line1, line2, annotate= FALSE, threshold= NULL, thresholddir = "upper", ...)
 }
 
 \arguments{
@@ -50,10 +50,13 @@ floor).
 Gap between two adjecent chromsomome for plotting. Should be specified to scale of distances provided for X axis (ie. base pair). The default value is 500.  
 }
   \item{pch}{
-The list of symbol type used to plot in the plot, maximum allowed is equal to number of chrosomomes plotted. If the number is less than total number of chromosomes, the pch is recycled till end.
+The list of symbol type used to plot in the plot, maximum allowed is equal to 
+number of chrosomomes plotted. If the number is less than total number of 
+chromosomes, the pch is recycled till end.
 } 
   \item{color}{
-The list of color type used to plot in the plot, maximum allowed is equal to number of chrosomomes plotted. 
+The list of color type used to plot in the plot, maximum allowed is equal to 
+number of chrosomomes plotted. 
 If the number is less than total number of chromosomes, the color is recycled till end.
 The number of color should be equal to number of pch. 
 }
@@ -63,6 +66,20 @@ Value at the point where you need to Horizental threshold line 1. NULL for no li
   \item{line2}{
 Value at the point where you need to Horizental threshold line 2. NULL for no line 
 }
+  \item{annotate}{
+logical - If TRUE will anotate all values over the specified threshold and snp name
+coulmn in addition to the points, false will have no effect   
+}
+  \item{threshold}{
+User defined threshold above ("upper") or below which points should be annotated.
+Please consider if pconv= "-log10" provide not raw value but
+-log10 converted value (for example 2 for 0.01, 3 for 0.01)  
+}
+  \item{thresholddir}{
+Whether you want to annotate upper than the threshold - use "upper" else lower than
+threshold will be annotated.  
+}
+
   \item{...}{
 more graphical parameters can be applied - see help (par)  
 }
@@ -86,6 +103,12 @@ pos= rep(1:2000, 20), pval= rnorm(2000*20, 0.001, 0.005))
 manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
 position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
 color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20) )
+
+# with annotation 
+manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
+position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
+color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20),
+annotate= TRUE, threshold= 6, thresholddir = "upper" )
 
 manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", position = "pos",
  pvcol = "pval",ymax = 10, ymin = 2,  gapbp = 500, color=c("dodgerblue4"), 
@@ -134,9 +157,30 @@ title(main = "Mahattan plot of results for trait2", sub = "Method: Linear mixed 
 # Example 3, plotting simple p-value or R-square 
  data13 <- data.frame (snp = 1: 2000*20 , chr = c(rep(1:20, each = 2000)), 
 pos= rep(1:2000, 20), pval= rnorm(2000*20, 0.15, 0.05))
-manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", SNPname = "snp", chromosome = "chr", 
+manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", 
+SNPname = "snp", chromosome = "chr", 
 position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
-color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20) )
+color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20) )
+# with annotation 
+manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square",
+ SNPname = "snp", chromosome = "chr", 
+position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
+color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20), 
+annotate= TRUE, threshold= 0.35, thresholddir = "upper")
+
+manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", 
+SNPname = "snp", chromosome = "chr", 
+position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
+color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20), 
+annotate= TRUE, threshold= 0.0001, thresholddir = "lower")
+
+# just annotate maximum value 
+manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", 
+SNPname = "snp", chromosome = "chr", 
+position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
+color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20), 
+annotate= TRUE, threshold= max(data13$pval), thresholddir = "upper")
+
 
 }
 
