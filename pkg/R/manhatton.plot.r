@@ -1,6 +1,9 @@
-manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum",
+manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol,
+ylabel = "pvalue", pconv= "-log10", ymax = "maximum",
     ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue",
-        "lightpink4", "blue"), line1, line2, annotate= FALSE, threshold= NULL, thresholddir = "upper", ...)
+        "lightpink4", "blue"), line1, line2, annotate= FALSE, threshold= NULL,
+        thresholddir = "upper", cex.anotate = 0.5, srt.anotate = 90, stripe= FALSE,
+        stripe.color = c("aliceblue", "cornsilk", "lightgoldenrod"), ...)
 {
 
     dat <- data.frame(dataframe[, SNPname], dataframe[, chromosome],
@@ -57,13 +60,39 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
 
 
     if(pconv == "-log10"){
-    plot(dat$bp, dat$logp, pch = pch[out], col = color[out],
+   if(stripe == TRUE){
+   plot(dat$bp, dat$logp, pch = pch[out], col = color[out],
         ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))),
         xlab = "Chromosome", xaxt = "n", ...)
+   agdatmax <- aggregate(bp ~ chr, data = dat, max)
+   agdatmin <- aggregate(bp ~ chr, data = dat, min)
+   ii = agdatmin$bp
+   jj = agdatmax$bp
+    rect(xleft = ii, ybottom = ymin, xright = jj, ytop = ymax,
+     col = stripe.color, border = stripe.color)
+   points(dat$bp, dat$logp, pch = pch[out], col = color[out])
+        } else{
+     plot(dat$bp, dat$logp, pch = pch[out], col = color[out],
+        ylim = c(ymin, ymax), ylab = expression(-log[10](italic(p))),
+        xlab = "Chromosome", xaxt = "n", ...)
+        }
         } else {
+    if(stripe == TRUE){
+    plot(dat$bp, dat$logp, pch = pch[out], col = color[out],
+        ylim = c(ymin, ymax), ylab = ylabel,
+        xlab = "Chromosome", xaxt = "n", ...)
+    agdatmax <- aggregate(bp ~ chr, data = dat, max)
+   agdatmin <- aggregate(bp ~ chr, data = dat, min)
+   ii = agdatmin$bp
+   jj = agdatmax$bp
+    rect(xleft = ii, ybottom = ymin, xright = jj, ytop = ymax,
+     col = stripe.color, border = stripe.color)
+   points(dat$bp, dat$logp, pch = pch[out], col = color[out])
+   } else {
      plot(dat$bp, dat$logp, pch = pch[out], col = color[out],
         ylim = c(ymin, ymax), ylab = ylabel,
         xlab = "Chromosome", xaxt = "n", ...)
+   }
         }
     infun <- function(X) ((max(X) + min(X))/2)
     tickd <- aggregate(bp ~ chr, data = dat, FUN = infun)
@@ -74,7 +103,8 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
            } else {
            newd <- dat[dat$logp <= threshold,]
              }
-     text (newd$bp, y = newd$logp, labels = newd$SNP, offset = 0.5, cex = 1, ...)
+     text (newd$bp, y = newd$logp, labels = newd$SNP, offset = 1, pos=4,
+     cex = cex.anotate, srt=srt.anotate,...)
   }
     if (line1)
         abline(h = line1, col = "blue")
@@ -136,9 +166,8 @@ manhatton.plot <- function (dataframe, SNPname, chromosome, position, pvcol, yla
   } else {
   newd <- dat[dat$logp <= threshold,]
   }
-  text (newd$bp, y = newd$logp, labels = newd$SNP, offset = 0.75, cex = 0.5, ...)
+  text (newd$bp, y = newd$logp, labels = newd$SNP, offset = 1, pos=4,
+  cex = cex.anotate,srt=srt.anotate, ...)
   }
   }
   }
- 
-

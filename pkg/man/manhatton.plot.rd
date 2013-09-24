@@ -9,9 +9,13 @@ Manhattan plot of p-values (log transoformed or raw) or other values such as R-s
 The function develops Mahnattan plot of p-values scaled to -log10(p).  If polar type of Manhattan plot is desired use the function manhatton.circos. Manhattan plot (Gibson 2010) are popular in plotting association mapping results, however can be used to plot other results genome-wide. 
 }
 \usage{
-manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum",
+manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue",
+       pconv= "-log10", ymax = "maximum",
     ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue",
-        "lightpink4", "blue"), line1, line2, annotate= FALSE, threshold= NULL, thresholddir = "upper", ...)
+        "lightpink4", "blue"), line1, line2, annotate= FALSE, 
+        threshold= NULL, thresholddir = "upper",cex.anotate = 0.5, 
+        srt.anotate = 90, stripe= FALSE,
+        stripe.color = c("aliceblue", "cornsilk", "lightgoldenrod") ...)
 }
 
 \arguments{
@@ -28,14 +32,14 @@ Name of variable column consisting of chromosome - ( eg. "chr")
 Name of variable column consisting of physical position of SNPs - (eg. "physicaldis")
 }
   \item{pvcol}{
-Name of p-value column to be used for plotting, dataframe can consists of multiple p-value column, can be plotted one by one. 
+Name of p-value column to be used for plotting, dataframe can consists of 
+multiple p-value column, can be plotted one by one. 
 Note that p-value should not contain zero or Inf or NaNs  
 }
   \item{ylabel}{
 Y axis label, only if pconv is not "-log10", defualt is "pvalue"
 }
-
-
+  
   \item{ymax}{
 Maximum value to be plotted in Y axis, if ymax is "maximum", this will automatically
 calculate maximum value from the data or user can define own maximum. The value 
@@ -47,7 +51,8 @@ calculate minimum value from data. The values are rounded to full number (using
 floor).  
 }
   \item{gapbp}{
-Gap between two adjecent chromsomome for plotting. Should be specified to scale of distances provided for X axis (ie. base pair). The default value is 500.  
+Gap between two adjecent chromsomome for plotting. Should be specified to scale 
+of distances provided for X axis (ie. base pair). The default value is 500.  
 }
   \item{pch}{
 The list of symbol type used to plot in the plot, maximum allowed is equal to 
@@ -79,6 +84,23 @@ Please consider if pconv= "-log10" provide not raw value but
 Whether you want to annotate upper than the threshold - use "upper" else lower than
 threshold will be annotated.  
 }
+  \item{cex.anotate}{
+When annotate is true, cex.anotate can increase font size, see cex under graphical
+parameters - help(par) 
+}
+  \item{srt.anotate}{
+String rotation, should be multiple of 90,see srt under graphical
+parameters - help(part), default 90  
+}
+  \item{stripe}{
+If you want to fill stripes (one or more colored) in plot area - TRUE, default
+is FALSE 
+}
+  \item{stripe.color}{
+vector of colors to be used in stripes, can be one or more colors depending upon
+number of colors desired in reapeating pattern. The default is three colors
+"aliceblue", "cornsilk" and "lightgoldenrod" 
+}
 
   \item{...}{
 more graphical parameters can be applied - see help (par)  
@@ -103,6 +125,17 @@ pos= rep(1:2000, 20), pval= rnorm(2000*20, 0.001, 0.005))
 manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
 position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
 color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20) )
+
+# adding stripes (color filled rectangles)
+manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
+position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
+color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20),
+stripe= TRUE, stripe.color = c("aliceblue", "cornsilk", "lightgoldenrod") )
+
+manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
+position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 200, 
+color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20),
+stripe= TRUE, stripe.color = c("grey90", "grey93", "grey96") )
 
 # with annotation 
 manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
@@ -154,6 +187,8 @@ manhatton.plot(dataframe = dat2, SNPname = "snp", chromosome = "chr", position =
  pvcol = "pval2", line1 = 4, line2 = 8, ymax = "maximum", ymin = 0)
 title(main = "Mahattan plot of results for trait2", sub = "Method: Linear mixed model")
 
+
+
 # Example 3, plotting simple p-value or R-square 
  data13 <- data.frame (snp = 1: 2000*20 , chr = c(rep(1:20, each = 2000)), 
 pos= rep(1:2000, 20), pval= rnorm(2000*20, 0.15, 0.05))
@@ -161,6 +196,7 @@ manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square",
 SNPname = "snp", chromosome = "chr", 
 position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
 color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20) )
+
 # with annotation 
 manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square",
  SNPname = "snp", chromosome = "chr", 
