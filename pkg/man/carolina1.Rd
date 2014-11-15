@@ -38,7 +38,7 @@ TRUE or FALSE depending upon if you want to fit REML model or not
 }
 }
 \value{
-The following values as list are returned 
+The following values as list are returned -
 \item{model}{model - use anova (model) to see analysis of variables}
 \item{`variance male`}{Male variance}
 \item{`BULP estimates`}{BLUP estimates}
