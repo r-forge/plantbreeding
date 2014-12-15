@@ -4,11 +4,10 @@
 Analysis of North Carolina Design I
 }
 \description{
-The function perfromsperforms both conventional and restricted (or residual, or 
-reduced) maximum likelihood (REML) analysis of North Carolina I design (Comstock and Rosbinson 1952).
+The function performs analysis of North Carolina I design (Comstock and Rosbinson 1952).
 }
 \usage{
-carolina1(dataframe, set, male, female, progeny, replication, yvar, REML = TRUE)
+carolina1(dataframe, set, male, female, progeny, replication, yvar)
 }
 \arguments{
   \item{dataframe}{
@@ -32,9 +31,6 @@ name of numeric variable with replication
 }
   \item{yvar}{
 name of name of y variable to be analyzed
-}
-  \item{REML}{
-TRUE or FALSE depending upon if you want to fit REML model or not 
 }
 }
 \value{
@@ -68,7 +64,7 @@ Umesh R. Rosyara
 data(northcaro1)
 # using general linear model
 p1 <- carolina1(dataframe = northcaro1, set = "set", male = "male", female = "female", 
-progeny = "progeny", replication = "replication", yvar = "yield", REML = FALSE )
+progeny = "progeny", replication = "replication", yvar = "yield")
 print(p1)
 
 anova(p1[[1]]) # anova 
@@ -80,13 +76,5 @@ p1$ var.f # femal variance
 p1$ var.A # variance additive 
 p1$ var.D # variance dominance 
 
-# using REML estimation
-require(lme4) 
-p2 <- carolina1(dataframe = northcaro1, set = "set", male = "male", female = "female", 
-progeny = "progeny", replication = "replication", yvar = "yield", REML = TRUE )
-
-p2
-p2$model 
-p2$`BULP estimates`
 
 }
