@@ -1,11 +1,11 @@
 Package: plantbreeding
 Type: Package
 Title:  Analysis and visualization of data from plant breeding and genetics experiments  
-Version: 1.1.0
-Date: 2012-06-25
+Version: 1.1.1
+Date: 2014-12-14
 Author: Umesh R. Rosyara 
-Maintainer: Umesh R. Rosyara <rosyara@msu.edu> 
-Depends: R (>= 1.15.1), qtl, lattice, ggplot2, onemap, grid, agricolae, reshape, lme4, boot, plyr, pvclust 
+Maintainer: Umesh R. Rosyara <rosyara@wisc.edu> 
+Depends: R (>= 1.15.1), reshape, plyr
 Suggests: qtl, onemap, agricolae 
 Description: The package contains different functionalities relevant to analysis of data from both conventional and molecular plant breeding and genetics experiments.
 License: GPL (>= 2)

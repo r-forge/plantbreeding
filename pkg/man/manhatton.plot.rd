@@ -2,20 +2,15 @@
 \alias{manhatton.plot}
 
 \title{
-Manhattan plot of p-values (log transoformed or raw) or other values such as R-square
- (variance explained) 
+Manhattan plot of p-values 
 }
 \description{
 The function develops Mahnattan plot of p-values scaled to -log10(p).  If polar type of Manhattan plot is desired use the function manhatton.circos. Manhattan plot (Gibson 2010) are popular in plotting association mapping results, however can be used to plot other results genome-wide. 
 }
 \usage{
-manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue",
-       pconv= "-log10", ymax = "maximum",
-    ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue",
-        "lightpink4", "blue"), line1, line2, annotate= FALSE, 
-        threshold= NULL, thresholddir = "upper",cex.anotate = 0.5, 
-        srt.anotate = 90, stripe= FALSE,
-        stripe.color = c("aliceblue", "cornsilk", "lightgoldenrod") ...)
+manhatton.plot(dataframe, SNPname, chromosome, position, pvcol, ylabel = "pvalue", pconv= "-log10", ymax = "maximum",
+ ymin = "minimum", gapbp = 500, pch = c(18, 19, 20), color = c("midnightblue", 
+ "lightpink4", "blue"), line1, line2)
 }
 
 \arguments{
@@ -32,36 +27,28 @@ Name of variable column consisting of chromosome - ( eg. "chr")
 Name of variable column consisting of physical position of SNPs - (eg. "physicaldis")
 }
   \item{pvcol}{
-Name of p-value column to be used for plotting, dataframe can consists of 
-multiple p-value column, can be plotted one by one. 
+Name of p-value column to be used for plotting, dataframe can consists of multiple p-value column, can be plotted one by one. 
 Note that p-value should not contain zero or Inf or NaNs  
 }
   \item{ylabel}{
 Y axis label, only if pconv is not "-log10", defualt is "pvalue"
 }
-  
+
+
   \item{ymax}{
-Maximum value to be plotted in Y axis, if ymax is "maximum", this will automatically
-calculate maximum value from the data or user can define own maximum. The value 
-are rounded using ceiling while setting such maximum.   
+Maximum value to be plotted in Y axis, if ymax is less than 8, the plot will set the maximum to 8 otherwise user defined maximum.   
 }
   \item{ymin}{
-Minimum value to be plotted in X axis. If this is "minimum", this will automatically
-calculate minimum value from data. The values are rounded to full number (using 
-floor).  
+Minimum value to be plotted in X axis. 
 }
   \item{gapbp}{
-Gap between two adjecent chromsomome for plotting. Should be specified to scale 
-of distances provided for X axis (ie. base pair). The default value is 500.  
+Gap between two adjecent chromsomome for plotting. Should be specified to scale of distances provided for X axis (ie. base pair). The default value is 500.  
 }
   \item{pch}{
-The list of symbol type used to plot in the plot, maximum allowed is equal to 
-number of chrosomomes plotted. If the number is less than total number of 
-chromosomes, the pch is recycled till end.
+The list of symbol type used to plot in the plot, maximum allowed is equal to number of chrosomomes plotted. If the number is less than total number of chromosomes, the pch is recycled till end.
 } 
   \item{color}{
-The list of color type used to plot in the plot, maximum allowed is equal to 
-number of chrosomomes plotted. 
+The list of color type used to plot in the plot, maximum allowed is equal to number of chrosomomes plotted. 
 If the number is less than total number of chromosomes, the color is recycled till end.
 The number of color should be equal to number of pch. 
 }
@@ -70,40 +57,6 @@ Value at the point where you need to Horizental threshold line 1. NULL for no li
 }
   \item{line2}{
 Value at the point where you need to Horizental threshold line 2. NULL for no line 
-}
-  \item{annotate}{
-logical - If TRUE will anotate all values over the specified threshold and snp name
-coulmn in addition to the points, false will have no effect   
-}
-  \item{threshold}{
-User defined threshold above ("upper") or below which points should be annotated.
-Please consider if pconv= "-log10" provide not raw value but
--log10 converted value (for example 2 for 0.01, 3 for 0.01)  
-}
-  \item{thresholddir}{
-Whether you want to annotate upper than the threshold - use "upper" else lower than
-threshold will be annotated.  
-}
-  \item{cex.anotate}{
-When annotate is true, cex.anotate can increase font size, see cex under graphical
-parameters - help(par) 
-}
-  \item{srt.anotate}{
-String rotation, should be multiple of 90,see srt under graphical
-parameters - help(part), default 90  
-}
-  \item{stripe}{
-If you want to fill stripes (one or more colored) in plot area - TRUE, default
-is FALSE 
-}
-  \item{stripe.color}{
-vector of colors to be used in stripes, can be one or more colors depending upon
-number of colors desired in reapeating pattern. The default is three colors
-"aliceblue", "cornsilk" and "lightgoldenrod" 
-}
-
-  \item{...}{
-more graphical parameters can be applied - see help (par)  
 }
 }
 \details{
@@ -125,23 +78,6 @@ pos= rep(1:2000, 20), pval= rnorm(2000*20, 0.001, 0.005))
 manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
 position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
 color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20) )
-
-# adding stripes (color filled rectangles)
-manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
-position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
-color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20),
-stripe= TRUE, stripe.color = c("aliceblue", "cornsilk", "lightgoldenrod") )
-
-manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
-position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 200, 
-color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20),
-stripe= TRUE, stripe.color = c("grey90", "grey93", "grey96") )
-
-# with annotation 
-manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", 
-position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
-color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20),
-annotate= TRUE, threshold= 6, thresholddir = "upper" )
 
 manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", position = "pos",
  pvcol = "pval",ymax = 10, ymin = 2,  gapbp = 500, color=c("dodgerblue4"), 
@@ -187,36 +123,12 @@ manhatton.plot(dataframe = dat2, SNPname = "snp", chromosome = "chr", position =
  pvcol = "pval2", line1 = 4, line2 = 8, ymax = "maximum", ymin = 0)
 title(main = "Mahattan plot of results for trait2", sub = "Method: Linear mixed model")
 
-
-
 # Example 3, plotting simple p-value or R-square 
  data13 <- data.frame (snp = 1: 2000*20 , chr = c(rep(1:20, each = 2000)), 
 pos= rep(1:2000, 20), pval= rnorm(2000*20, 0.15, 0.05))
-manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", 
-SNPname = "snp", chromosome = "chr", 
+manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", SNPname = "snp", chromosome = "chr", 
 position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
-color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20) )
-
-# with annotation 
-manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square",
- SNPname = "snp", chromosome = "chr", 
-position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
-color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20), 
-annotate= TRUE, threshold= 0.35, thresholddir = "upper")
-
-manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", 
-SNPname = "snp", chromosome = "chr", 
-position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
-color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20), 
-annotate= TRUE, threshold= 0.0001, thresholddir = "lower")
-
-# just annotate maximum value 
-manhatton.plot(dataframe = data13, pconv= "NULL", ylabel = "R-square", 
-SNPname = "snp", chromosome = "chr", 
-position = "pos", pvcol = "pval",ymax = "maximum", ymin = 0,  gapbp = 500, 
-color=c("hotpink3","dodgerblue4"), line1 = 0.6, line2 = 0.2, pch = c(1,20), 
-annotate= TRUE, threshold= max(data13$pval), thresholddir = "upper")
-
+color=c("hotpink3","dodgerblue4"), line1 = 3, line2 = 5, pch = c(1,20) )
 
 }
 

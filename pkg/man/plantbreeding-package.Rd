@@ -3,16 +3,12 @@
 \alias{plantbreeding}
 \docType{package}
 \title{
-Analysis and visualization of data from plant breeding and genetics experiments 
+Analysis of data from plant breeding and genetics experiments 
 }
 \description{
 Plant breeding is science of altering the genetics of plants in order to create desired characteristics for food, energy, medicine, industry and environmental purposes in cultivars. Plant breeding is interdisciplinary applied science involve application of diverse disciplines including genetics, statistics, plant pathology, entomology, plant physiology and other  agricultural and biological sciences.
-
-
  Data analysis and visualization is very important in plant breeding research area and this package is developed with objective of analysis of conventional and molecular data using different functions implemented in the robust R statistical analysis environment. 
  In addition to development of new functions, examples are provided with analysis command to demonstrate how R can be used in analysis and visualization of data from plant breeding and genetics experiments. 
-
-
 This adds-on package contains functionality for analysis and visualization data from plant breeding experiments. Analysis includes both conventional quantitative genetics as well as molecular breeding tools. The library also consists of example datasets and codes to perform different analysis relevant to plant breeders depending upon other R packages. 
 
 
@@ -21,8 +17,8 @@ This adds-on package contains functionality for analysis and visualization data 
 \tabular{ll}{
 Package: \tab plantbreeding\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2012-04-21\cr
+Version: \tab 1.1\cr
+Date: \tab 2014-12-14\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -115,21 +111,18 @@ labCol = colnames(out$sca.effmat)) # heatmap plot of SCA matrix
 out$reciprocal.effmat # reciprocal effect matrix 
 
 
-# Example 2: Stability, AMMI analysis and heatmap plot   
+# Example 2: Stability, AMMI analysis 
 # stability analysis 
 require(plantbreeding)
 data(multienv)
 out <- stability (dataframe = multienv , yvar = "yield", genotypes = "genotypes", 
 environments = "environments", replication =  "replication")
-out
+print(out)
+
 # AMMI analysis 
 results <- ammi.full(dataframe = multienv , environment = "environments", genotype = "genotypes", 
 replication = "replication", yvar = "yield")
-results
-
-# heatmap plot 
-heatmap (results$means, col = cm.colors (10))
-
+print(results)
 
 
 # Example 3 : Analysis of Augumented row column block designs 
@@ -145,43 +138,8 @@ outp$Adjustment # adjusted values
 set.seed (1234) 
 data12 <- data.frame (snp = 1: 2000*20 , chr = c(rep(1:20, each = 2000)), pos= rep(1:2000, 20), 
 pval= rnorm(2000*20, 0.001, 0.005))
-
-manhatton.circos(dataframe = data12, SNPname = "snp", chromosome = "chr", position = "pos",
- pvcol = "pval",ymax = "maximum", ymin = 0, gapbp = 500,
- type = "polar", colour = "multicolor", geom = "area")
- 
-manhatton.circos(dataframe = data12, SNPname = "snp", chromosome = "chr", position = "pos", 
-pvcol = "pval",ymax = "maximum", ymin = 0, gapbp = 1000,
- type = "polar", colour = "multicolor" , geom = "point")
- 
- manhatton.circos(dataframe = data12, SNPname = "snp", chromosome = "chr", position = "pos",
-  pvcol = "pval",ymax = "maximum", ymin = 0, gapbp = 1000,
- type = "regular", colour = "multicolor" , geom = c("line","point"))
- 
 manhatton.plot(dataframe = data12, SNPname = "snp", chromosome = "chr", position = "pos",
  pvcol = "pval",ymax = "maximum", ymin = 0, gapbp = 500, color=c("hotpink3","dodgerblue4"), 
  line1 = 3, line2 = 5, pch = c(1,20) ) 
-
-
-
-### Example 5: plot maps with additional informations 
-lab1 <- paste("SNP_", 1:30, sep = "")
-mapdat <- data.frame (chr = rep(1:3, each = length (lab1)/3), label= lab1, 
-position= c(0, 1, 4, 5, 6, 8, 10,  11, 12,  13,
-            0, 4, 5, 9, 12, 18, 20, 21, 22,  33,
-            0, 2, 6, 9, 12, 14, 18,  21, 24,  28 ))
-# positions must start from zero 
- # data 2 filling avariable data 
-set.seed (1234)
-fillcol <-rnorm(3*(length(lab1)-1), 0.5, 0.2)
-filld <- data.frame(chr1 = rep(1:3, each = length(fillcol)/3), fillcol)
- 
-   
- mapbar.plot (mapdat = mapdat, chr = "chr" ,position = "position",label = "label",
-  colorpalvec = heat.colors, size = 10,  filld = filld, chr1 = "chr1") 
-# Brewing own color palette 
- colvec1 <- colorRampPalette(c("red", "yellow", "green")) 
-  mapbar.plot (mapdat = mapdat, chr = "chr" ,position = "position",label = "label", 
-  colorpalvec = colvec1, size = 10, filld = filld, chr1 = "chr1") 
    
 }

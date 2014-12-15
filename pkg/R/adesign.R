@@ -1,6 +1,6 @@
 adesign <-
 function (checks, newtrt, block.size = block.size, r,  seed = 999)
-          { 
+{ 
           checks <- as.vector(na.omit(checks))
           newtrt <- as.vector(na.omit(newtrt))
            block.size <- as.vector(na.omit (block.size))

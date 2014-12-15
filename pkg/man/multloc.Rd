@@ -43,30 +43,11 @@ cultivars as determined via yield-stability statistic and GGE biplot analysis. J
 data(multloc)
 out <- stability (dataframe = multloc , yvar = "Adj", genotypes = "Trt",
  environments = "Location", replication =  "Block")
-out
+print(out)
 # AMMI analysis 
 results <- ammi.full(dataframe = multloc , environment = "Location", genotype = "Trt",
  replication = "Block", yvar = "Adj")
-
-# heatmap plot of means 
-heatmap (results$means)
-
-# plot PCA scores 
- myd2 <- data.frame (results$pc.scrs)
- # genotype 
- require(ggplot2)
- mydgen <- myd2[myd2$category =="genotype",]
- d1 <- ggplot(mydgen, aes(PC1, PC2)) + geom_point() +
-  geom_text (aes (label = row.names (mydgen)), colour = "blue", hjust=1.2, vjust=0) +
-    ylab ("PC2") + xlab ("PC1") + theme_bw()
- print(d1)
- 
- #environment 
-  mydenv <- myd2[myd2$category =="environment",]
-  d2 <- ggplot(mydenv, aes(PC1, PC2)) + geom_point() +
-  geom_text (aes (label = row.names (mydenv)), colour = "red",hjust=1.2, vjust=0) + 
-   ylab ("PC2") + xlab ("PC1") + theme_bw()
-  print(d2) 
+print(results)
 
 }
 

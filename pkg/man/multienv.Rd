@@ -42,32 +42,7 @@ out
 # AMMI analysis 
 results <- ammi.full(dataframe = multienv , environment = "environments",
  genotype = "genotypes", replication = "replication", yvar = "yield")
+print(results)
 
-# heatmap plot 
-heatmap (results$means)
-
-# plot bar plot
-
-myd <- melt(results$means)
-require(ggplot2)
- d <- ggplot(myd, aes(genotype, value)) + geom_bar()
- d + facet_wrap(~ environment) + theme_bw()
-
-# plot PCA scores 
- myd2 <- data.frame (results$pc.scrs)
- # genotype 
- mydgen <- myd2[myd2$category =="genotype",]
- d1 <- ggplot(mydgen, aes(PC1, PC2)) + geom_point() +
-  geom_text (aes (label = row.names (mydgen)), colour = "blue", hjust=1.2, vjust=0) +
-    ylab ("PC2") + xlab ("PC1") + theme_bw()
- print(d1)
- 
- #environment 
-  mydenv <- myd2[myd2$category =="environment",]
-  d2 <- ggplot(mydenv, aes(PC1, PC2)) + geom_point() +
-  geom_text (aes (label = row.names (mydenv)), colour = "red",hjust=1.2, vjust=0) + 
-   ylab ("PC2") + xlab ("PC1") + theme_bw()
-  print(d2)
- 
 }
 

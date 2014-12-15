@@ -1,5 +1,5 @@
 carolina1 <-
-function (dataframe, set, male, female, progeny, replication, yvar, REML = TRUE )
+function (dataframe, set, male, female, progeny, replication, yvar )
 {        
         dataframe <- data.frame (dataframe[,set],dataframe[,male], dataframe[,female],dataframe[,progeny], dataframe[,replication],dataframe[,yvar])
          names (dataframe) <- c("set", "male", "female", "replication","progeny", yvar)   
@@ -10,7 +10,6 @@ function (dataframe, set, male, female, progeny, replication, yvar, REML = TRUE 
        dataframe$replication <- as.factor(dataframe$replication)
        mean.y <- mean(as.numeric(dataframe$yvar))
        name.y <- yvar 
-       if (REML == FALSE){
        formula <- paste(yvar, "~ set + replication : set + male : set + female : male : set + replication : female : male : set")
        model <- lm(formula, data = dataframe)
        cat("North carolina 1 design output: ", name.y, "\n\n")
@@ -38,25 +37,4 @@ function (dataframe, set, male, female, progeny, replication, yvar, REML = TRUE 
         output <- list(model, var.m = var.m, var.f = var.f, var.A = var.A,
             var.D = var.D)
         return(output)
-        } else {
-        require("lme4") # lme4a has new functions 
-        formula <- paste(yvar, "~ (1| set) +(1| set : replication)+ (1| male : set ) + (1| female : male :set) + (1| female : male : set : replication)")
-        fm1Gen <- lmer(formula, data = dataframe)
-         fm1.ran <- lme4::VarCorr(fm1Gen) # extracting variance random effect
-         fm1.eff <- lme4::ranef (fm1Gen)
-         fmsrvar <-  c(as.numeric(diag(fm1.ran$`female:male:set:replication`)))
-          fmsvar <- c(as.numeric(diag(fm1.ran$`female:male:set`)))
-           #show(fmsvar <- c(as.numeric(diag(fm1.ran$`female::set`))))
-          msvar <- c(as.numeric(diag(fm1.ran$`male:set`)))
-          srvar <- c(as.numeric(diag(fm1.ran$`set:replication`)))
-         svar <- c(as.numeric(diag(fm1.ran$`set`)))
-         resvar <- c((attr(VarCorr(fm1Gen), "sc"))^2)
-         var.m <- (msvar - fmsvar)
-         var.f <- (fmsvar  - fmsrvar)
-         var.A <- 4 * var.m
-         var.D <- 4 * var.f - 4 * var.m
-         cat("North carolina 1 design output using REML: ", name.y, "\n\n")
-          varlist <- list(model = fm1Gen,"BULP estimates" = fm1.eff, "variance male" = var.m,"variance female" = var.f,"additive variance" = var.A, "dominance variance" = var.D, "female:male:set:replication" = fmsrvar, "female:male:set" = fmsvar,  "male:set" = msvar,"set:replication" = srvar, "set" = svar, "residual" = resvar)
-          return(varlist)
-    }
     }

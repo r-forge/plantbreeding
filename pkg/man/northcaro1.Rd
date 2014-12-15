@@ -36,9 +36,8 @@ Saxton A. (2004) Genetic Analysis of Complex Traits Using SAS. SAS Institute, In
 data(northcaro1)
 # using general linear model
 p1 <- carolina1(dataframe = northcaro1, set = "set", male = "male", female = "female", 
-progeny = "progeny", replication = "replication", yvar = "yield", REML = FALSE )
+progeny = "progeny", replication = "replication", yvar = "yield")
 print(p1)
-
 anova(p1[[1]]) # anova 
 
 p1[[1]]$coefficients  ## coefficients  
@@ -47,13 +46,6 @@ p1$var.m # male variance
 p1$ var.f # femal variance 
 p1$ var.A # variance additive 
 p1$ var.D # variance dominance 
-
-# using REML estimation
-require(lme4) 
-p2 <- carolina1(dataframe = northcaro1, set = "set", male = "male", female = "female", 
-progeny = "progeny", replication = "replication", yvar = "yield", REML = TRUE )
-print(p2)
-
 
 }
 \keyword{datasets}

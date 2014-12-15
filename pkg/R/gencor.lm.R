@@ -1,6 +1,6 @@
 gencor.lm <-
 function (dataframe, yvar1, yvar2, genovar, replication = replication, 
-    exout = F) 
+    exout = FALSE) 
 {
     dataframe <- data.frame (yvar1 = dataframe[,yvar1], yvar2 = dataframe[,yvar2], genovar = dataframe[,genovar], replication = dataframe[,replication])
     dataframe$genovar = as.factor(dataframe$genovar)

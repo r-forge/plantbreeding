@@ -85,10 +85,10 @@ To install the latest development version of package <tt>plantbreeding</tt> from
 <br>
 <blockquote>
 
-<hr><b> R package dependencies </b>
+<hr><b> Current version 1.1.1 </b>
 <blockquote>
+The current version of plantbreeding has fewer functions than 1.1.0 but do not depend upon any other packages.
 
-The plantbreeding depends upon lme4,  lattice and ggplot2 R packages. These packages are found for free installation from Comprehensive R Archive Network (CRAN) for free. The packages need to be installed for plantbreeding to work for specific functions
 <br>
 <blockquote>
 
@@ -101,7 +101,7 @@ pdf version of plantbreeding manual can be available on request.
 
 <hr><b>Developer / Maintainer:</b>
 <blockquote>
-<p> The package is developed and maintained by Umesh Rosyara, Michigan State University, East Lansing.The bugs and suggestions can be mailed to the developer rosyara_at_dot_edu.</p>
+<p> The package is developed and maintained by Umesh Rosyara, University of Wisconsin, Madison.The bugs and suggestions can be mailed to the developer rosyara_at_wisc_dot_edu.</p>
 </br>  
   </blockquote>
 
